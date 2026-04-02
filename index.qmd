@@ -4,14 +4,16 @@ description: "Connecting microbiologists across the Texas Medical Center"
 toc: false
 ---
 
+```{=html}
 <div class="hero-banner">
   <div class="hero-content">
     <h1 class="hero-title">ASM-TMC Chapter</h1>
     <p class="hero-subtitle">Advancing the Microbiological Sciences in the Texas Medical Center</p>
-    <a href="about.qmd" class="btn btn-primary btn-lg me-2">Learn About Us</a>
-    <a href="events.qmd" class="btn btn-outline-light btn-lg">Upcoming Events</a>
+    <a href="about.html" class="btn btn-primary btn-lg me-2">Learn About Us</a>
+    <a href="events.html" class="btn btn-outline-light btn-lg">Upcoming Events</a>
   </div>
 </div>
+```
 
 ---
 
