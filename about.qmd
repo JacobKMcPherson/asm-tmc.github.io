@@ -1,0 +1,154 @@
+---
+title: "About This Template"
+description: "Learn how to use and customize this Quarto website template"
+---
+
+## About This Template
+
+This is a template for creating **interactive, dynamic websites** using [Quarto](https://quarto.org). It demonstrates how to build web applications that are:
+
+- 🚀 **Fast** — Static site generation with no backend server required
+- 🎛️ **Interactive** — Client-side reactivity via Observable JS
+- 📊 **Data-driven** — Built-in support for charts, tables, and visualizations
+- 🌙 **Themeable** — Light/dark mode toggle included
+- 🔍 **Searchable** — Full-text search across all pages
+- 📱 **Responsive** — Mobile-friendly layout out of the box
+
+---
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| [Quarto](https://quarto.org) | Document authoring and site generation |
+| [Observable JS](https://observablehq.com) | Client-side interactivity and reactivity |
+| [Observable Plot](https://observablehq.com/plot/) | Data visualization library |
+| [Bootstrap](https://getbootstrap.com) | CSS framework (via Quarto themes) |
+| [GitHub Actions](https://github.com/features/actions) | Automated CI/CD pipeline |
+| [GitHub Pages](https://pages.github.com) | Static site hosting |
+
+---
+
+## Project Structure
+
+```
+.
+├── _quarto.yml          # Site configuration
+├── index.qmd            # Home page
+├── data-viz.qmd         # Data visualization page
+├── widgets.qmd          # Interactive widgets page
+├── about.qmd            # This page
+├── styles.css           # Custom CSS styles
+└── .github/
+    └── workflows/
+        └── publish.yml  # GitHub Pages deployment
+```
+
+---
+
+## How to Use This Template
+
+### 1. Fork or Clone the Repository
+
+```bash
+git clone https://github.com/JacobKMcPherson/template_interactive_dynamic_website.git
+cd template_interactive_dynamic_website
+```
+
+### 2. Install Quarto
+
+Download and install Quarto from [quarto.org/docs/get-started](https://quarto.org/docs/get-started/).
+
+### 3. Preview Locally
+
+```bash
+quarto preview
+```
+
+This will start a local development server at `http://localhost:4848`.
+
+### 4. Add Your Content
+
+Create new `.qmd` files and add them to the `navbar` in `_quarto.yml`:
+
+```yaml
+website:
+  navbar:
+    left:
+      - href: your-new-page.qmd
+        text: Your Page
+```
+
+### 5. Build the Site
+
+```bash
+quarto render
+```
+
+The output will be in the `_site/` directory.
+
+### 6. Deploy to GitHub Pages
+
+Push your changes to the main branch. The GitHub Actions workflow in `.github/workflows/publish.yml` will automatically build and deploy your site to GitHub Pages.
+
+::: {.callout-important}
+## First-Time Setup
+Before the GitHub Actions workflow can deploy to GitHub Pages, you need to enable GitHub Pages in your repository settings:
+
+1. Go to **Settings → Pages**
+2. Under **Source**, select **GitHub Actions**
+3. Save the settings
+:::
+
+---
+
+## Customization
+
+### Changing the Theme
+
+Edit `_quarto.yml` to change the color theme:
+
+```yaml
+format:
+  html:
+    theme:
+      light: flatly    # Change to: cosmo, litera, minty, etc.
+      dark: darkly     # Change to: cyborg, slate, vapor, etc.
+```
+
+See all available themes at [quarto.org/docs/output-formats/html-themes](https://quarto.org/docs/output-formats/html-themes.html).
+
+### Adding Interactive Elements
+
+Use Observable JS code blocks (` ```{ojs} `) to add interactive elements:
+
+```{ojs}
+//| echo: true
+viewof mySlider = Inputs.range([0, 100], { label: "Value", value: 50 })
+```
+
+```{ojs}
+//| echo: true
+html`<p>You selected: <strong>${mySlider}</strong></p>`
+```
+
+### Navigation Structure
+
+The site uses a top navigation bar. Customize it in `_quarto.yml`:
+
+```yaml
+website:
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - icon: github
+        href: https://github.com/your-repo
+```
+
+---
+
+## License
+
+This template is released under the [MIT License](https://github.com/JacobKMcPherson/template_interactive_dynamic_website/blob/main/LICENSE).

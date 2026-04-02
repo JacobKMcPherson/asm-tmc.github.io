@@ -1,0 +1,300 @@
+---
+title: "Interactive Widgets"
+description: "Dynamic inputs, sliders, and reactive displays"
+---
+
+This page showcases Observable JS interactive widgets — all running entirely in your browser without any server-side computation.
+
+---
+
+## Text & Search
+
+```{ojs}
+viewof searchTerm = Inputs.text({
+  label: "Search fruits",
+  placeholder: "Type to filter...",
+  value: ""
+})
+```
+
+```{ojs}
+fruits = [
+  "Apple", "Apricot", "Avocado", "Banana", "Blueberry",
+  "Cherry", "Coconut", "Grape", "Guava", "Kiwi",
+  "Lemon", "Lime", "Mango", "Orange", "Papaya",
+  "Peach", "Pear", "Pineapple", "Plum", "Raspberry",
+  "Strawberry", "Tangerine", "Watermelon"
+]
+
+filteredFruits = fruits.filter(f =>
+  f.toLowerCase().includes(searchTerm.toLowerCase())
+)
+
+html`<ul style="column-count: 3; list-style: none; padding: 0;">
+  ${filteredFruits.length > 0
+    ? filteredFruits.map(f => `<li>🍎 ${f}</li>`).join('')
+    : '<li style="color: gray;">No results found</li>'
+  }
+</ul>
+<p style="color: gray; font-size: 0.85rem;">${filteredFruits.length} of ${fruits.length} items</p>`
+```
+
+---
+
+## Unit Converter
+
+```{ojs}
+viewof convertFrom = Inputs.select(
+  ["Celsius", "Fahrenheit", "Kelvin"],
+  { label: "From unit", value: "Celsius" }
+)
+
+viewof temperature = Inputs.range([-100, 500], {
+  label: `Temperature (${convertFrom})`,
+  step: 0.5,
+  value: 0
+})
+```
+
+```{ojs}
+celsiusValue = {
+  if (convertFrom === "Celsius") return temperature;
+  if (convertFrom === "Fahrenheit") return (temperature - 32) * 5 / 9;
+  return temperature - 273.15;
+}
+
+conversions = {
+  const C = celsiusValue;
+  return {
+    "Celsius (°C)": C.toFixed(2),
+    "Fahrenheit (°F)": (C * 9 / 5 + 32).toFixed(2),
+    "Kelvin (K)": (C + 273.15).toFixed(2),
+    "Rankine (°R)": ((C + 273.15) * 9 / 5).toFixed(2)
+  };
+}
+
+html`<table class="table table-striped">
+  <thead><tr><th>Unit</th><th>Value</th></tr></thead>
+  <tbody>
+    ${Object.entries(conversions).map(([unit, val]) =>
+      `<tr><td>${unit}</td><td><strong>${val}</strong></td></tr>`
+    ).join('')}
+  </tbody>
+</table>`
+```
+
+---
+
+## Loan Calculator
+
+```{ojs}
+viewof principal = Inputs.range([1000, 1000000], {
+  label: "Loan amount ($)",
+  step: 1000,
+  value: 250000
+})
+
+viewof annualRate = Inputs.range([0.1, 20], {
+  label: "Annual interest rate (%)",
+  step: 0.1,
+  value: 6.5
+})
+
+viewof termYears = Inputs.range([1, 30], {
+  label: "Loan term (years)",
+  step: 1,
+  value: 30
+})
+```
+
+```{ojs}
+// Shared loan variables — defined once, referenced by both loanCalc and amortData
+r = annualRate / 100 / 12
+n = termYears * 12
+monthlyPayment = r === 0
+  ? principal / n
+  : principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1)
+
+loanCalc = {
+  const totalPayment = monthlyPayment * n;
+  const totalInterest = totalPayment - principal;
+  return {
+    monthly: monthlyPayment.toFixed(2),
+    totalPayment: totalPayment.toFixed(2),
+    totalInterest: totalInterest.toFixed(2),
+    interestPct: ((totalInterest / principal) * 100).toFixed(1)
+  };
+}
+
+html`<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-label">MONTHLY PAYMENT</div>
+    <div class="stat-value">$${Number(loanCalc.monthly).toLocaleString()}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">TOTAL PAYMENT</div>
+    <div class="stat-value">$${Number(loanCalc.totalPayment).toLocaleString()}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">TOTAL INTEREST</div>
+    <div class="stat-value">$${Number(loanCalc.totalInterest).toLocaleString()}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">INTEREST / PRINCIPAL</div>
+    <div class="stat-value">${loanCalc.interestPct}%</div>
+  </div>
+</div>`
+```
+
+```{ojs}
+// Build amortization schedule data using shared r, n, monthlyPayment
+amortData = {
+  let balance = principal;
+  const data = [];
+  for (let i = 1; i <= n; i++) {
+    const interest = balance * r;
+    const principalPaid = monthlyPayment - interest;
+    balance -= principalPaid;
+    if (i % 12 === 0) {
+      data.push({
+        year: i / 12,
+        balance: Math.max(0, balance)
+      });
+    }
+  }
+  return data;
+}
+
+Plot.plot({
+  title: "Remaining Balance Over Time",
+  x: { label: "Year" },
+  y: { label: "Amount ($)", tickFormat: d => `$${(d/1000).toFixed(0)}k` },
+  marks: [
+    Plot.areaY(amortData, { x: "year", y: "balance", fill: "steelblue", fillOpacity: 0.3 }),
+    Plot.line(amortData, { x: "year", y: "balance", stroke: "steelblue", strokeWidth: 2 }),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+---
+
+## Data Table with Sorting and Filtering
+
+```{ojs}
+viewof tableFilter = Inputs.text({
+  label: "Filter by name",
+  placeholder: "Search...",
+  value: ""
+})
+
+viewof sortCol = Inputs.select(
+  ["name", "population", "area", "density"],
+  { label: "Sort by" }
+)
+```
+
+```{ojs}
+countriesData = [
+  { name: "China", population: 1411778724, area: 9596960, density: 147 },
+  { name: "India", population: 1380004385, area: 3287263, density: 420 },
+  { name: "USA", population: 331002651, area: 9833517, density: 34 },
+  { name: "Indonesia", population: 273523615, area: 1904569, density: 145 },
+  { name: "Pakistan", population: 220892340, area: 881913, density: 255 },
+  { name: "Brazil", population: 212559417, area: 8515767, density: 25 },
+  { name: "Nigeria", population: 206139589, area: 923768, density: 226 },
+  { name: "Bangladesh", population: 164689383, area: 147570, density: 1116 },
+  { name: "Russia", population: 145934462, area: 17098242, density: 9 },
+  { name: "Mexico", population: 128932753, area: 1964375, density: 66 },
+  { name: "Ethiopia", population: 114963588, area: 1104300, density: 115 },
+  { name: "Japan", population: 125836021, area: 377930, density: 347 },
+  { name: "Philippines", population: 109581078, area: 343448, density: 363 },
+  { name: "Egypt", population: 102334404, area: 1001449, density: 102 },
+  { name: "DR Congo", population: 89561403, area: 2344858, density: 40 }
+]
+
+filteredCountries = countriesData
+  .filter(d => d.name.toLowerCase().includes(tableFilter.toLowerCase()))
+  .sort((a, b) => {
+    if (sortCol === "name") return a.name.localeCompare(b.name);
+    return b[sortCol] - a[sortCol];
+  })
+
+Inputs.table(filteredCountries, {
+  columns: ["name", "population", "area", "density"],
+  header: {
+    name: "Country",
+    population: "Population",
+    area: "Area (km²)",
+    density: "Density (per km²)"
+  },
+  format: {
+    population: d => d.toLocaleString(),
+    area: d => d.toLocaleString(),
+    density: d => d.toLocaleString()
+  },
+  sort: sortCol,
+  reverse: sortCol !== "name"
+})
+```
+
+---
+
+## Markdown Editor Preview
+
+```{ojs}
+viewof markdownInput = Inputs.textarea({
+  label: "Write Markdown",
+  value: `# Hello, World!
+
+This is a **live** Markdown preview.
+
+- Item one
+- Item two
+- Item three
+
+> Blockquote example
+
+\`inline code\``,
+  rows: 10
+})
+```
+
+```{ojs}
+// Escape HTML entities before applying Markdown transforms to prevent XSS
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Simple markdown to HTML converter
+function simpleMarkdown(text) {
+  return escapeHtml(text)
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/`(.+?)`/g, '<code>$1</code>')
+    .replace(/^&gt; (.+)$/gm, '<blockquote>$1</blockquote>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/((?:<li>[^\n]*<\/li>\n?)+)/g, '<ul>$1</ul>')
+    .replace(/\n\n/g, '<br>');
+}
+
+html`<div style="
+  border: 1px solid var(--bs-border-color);
+  border-radius: 4px;
+  padding: 1rem;
+  min-height: 200px;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+">
+  ${simpleMarkdown(markdownInput)}
+</div>`
+```

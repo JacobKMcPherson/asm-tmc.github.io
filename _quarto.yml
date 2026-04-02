@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Interactive Dynamic Website"
+  description: "A template interactive, dynamic website built using Quarto"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: data-viz.qmd
+        text: Data Visualization
+      - href: widgets.qmd
+        text: Interactive Widgets
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/JacobKMcPherson/template_interactive_dynamic_website
+  page-footer:
+    left: "Built with [Quarto](https://quarto.org)"
+    right: "© 2024 Template Interactive Dynamic Website"
+  search: true
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    smooth-scroll: true
+
+execute:
+  freeze: auto

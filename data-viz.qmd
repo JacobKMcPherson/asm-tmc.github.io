@@ -1,0 +1,243 @@
+---
+title: "Data Visualization"
+description: "Interactive charts and plots powered by Observable JS"
+---
+
+This page demonstrates interactive data visualizations built with Observable JS, which runs entirely in the browser — no server required.
+
+---
+
+## Interactive Bar Chart
+
+Use the controls below to customize the chart:
+
+```{ojs}
+viewof numBars = Inputs.range([3, 20], {
+  label: "Number of bars",
+  step: 1,
+  value: 8
+})
+
+viewof colorScheme = Inputs.select(
+  ["Blues", "Greens", "Reds", "Purples", "Oranges"],
+  { label: "Color scheme", value: "Blues" }
+)
+```
+
+```{ojs}
+barData = Array.from({ length: numBars }, (_, i) => ({
+  label: `Item ${i + 1}`,
+  value: Math.round(20 + Math.random() * 80)
+}))
+```
+
+```{ojs}
+// Use Plot from Observable
+Plot.plot({
+  title: "Interactive Bar Chart",
+  marginLeft: 60,
+  x: { label: "Value →" },
+  y: { label: "Category" },
+  color: { scheme: colorScheme },
+  marks: [
+    Plot.barX(barData, {
+      x: "value",
+      y: "label",
+      fill: "value",
+      sort: { y: "-x" },
+      tip: true
+    }),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+---
+
+## Scatter Plot with Filtering
+
+Explore a generated dataset with dynamic filtering:
+
+```{ojs}
+viewof sampleSize = Inputs.range([10, 500], {
+  label: "Sample size",
+  step: 10,
+  value: 100
+})
+
+viewof showTrendline = Inputs.toggle({ label: "Show trend line", value: true })
+```
+
+```{ojs}
+scatterData = Array.from({ length: sampleSize }, (_, i) => {
+  const x = Math.random() * 100;
+  const noise = (Math.random() - 0.5) * 30;
+  return {
+    x: x,
+    y: 0.8 * x + 20 + noise,
+    group: x < 33 ? "Low" : x < 66 ? "Medium" : "High"
+  };
+})
+```
+
+```{ojs}
+scatterMarks = [
+  Plot.dot(scatterData, {
+    x: "x",
+    y: "y",
+    fill: "group",
+    opacity: 0.7,
+    r: 4,
+    tip: true
+  })
+]
+
+trendlineMarks = showTrendline
+  ? [Plot.linearRegressionY(scatterData, { x: "x", y: "y", stroke: "red", strokeWidth: 2 })]
+  : []
+
+Plot.plot({
+  title: "Scatter Plot with Grouping",
+  color: { legend: true, scheme: "Set2" },
+  grid: true,
+  marks: [...scatterMarks, ...trendlineMarks]
+})
+```
+
+---
+
+## Time Series Chart
+
+A dynamic time series with configurable parameters:
+
+```{ojs}
+viewof timePoints = Inputs.range([20, 200], {
+  label: "Data points",
+  step: 10,
+  value: 60
+})
+
+viewof smoothing = Inputs.range([0, 10], {
+  label: "Smoothing window",
+  step: 1,
+  value: 3
+})
+```
+
+```{ojs}
+timeData = (() => {
+  const data = [];
+  let value = 50;
+  const start = new Date("2023-01-01");
+  for (let i = 0; i < timePoints; i++) {
+    value += (Math.random() - 0.48) * 5;
+    value = Math.max(0, Math.min(100, value));
+    const date = new Date(start);
+    date.setDate(start.getDate() + i);
+    data.push({ date, value: Math.round(value * 100) / 100 });
+  }
+  return data;
+})()
+```
+
+```{ojs}
+smoothedData = timeData.map((d, i) => {
+  const window = timeData.slice(
+    Math.max(0, i - smoothing),
+    Math.min(timeData.length, i + smoothing + 1)
+  );
+  const avg = window.reduce((s, w) => s + w.value, 0) / window.length;
+  return { ...d, smoothed: Math.round(avg * 100) / 100 };
+})
+
+Plot.plot({
+  title: "Time Series with Optional Smoothing",
+  x: { type: "time", label: "Date" },
+  y: { label: "Value", domain: [0, 100] },
+  marks: [
+    Plot.line(smoothedData, { x: "date", y: "value", stroke: "#ccc", strokeWidth: 1 }),
+    Plot.line(smoothedData, { x: "date", y: "smoothed", stroke: "steelblue", strokeWidth: 2 }),
+    Plot.areaY(smoothedData, {
+      x: "date",
+      y: "smoothed",
+      fill: "steelblue",
+      fillOpacity: 0.1
+    })
+  ]
+})
+```
+
+---
+
+## Summary Statistics
+
+Select a dataset property to see live summary statistics:
+
+```{ojs}
+viewof statSampleSize = Inputs.range([30, 1000], {
+  label: "Sample size",
+  step: 10,
+  value: 200
+})
+
+viewof distribution = Inputs.select(
+  ["Normal", "Uniform", "Exponential"],
+  { label: "Distribution" }
+)
+```
+
+```{ojs}
+statData = (() => {
+  const n = statSampleSize;
+  if (distribution === "Normal") {
+    // Box-Muller transform
+    return Array.from({ length: n }, () => {
+      const u1 = Math.random(), u2 = Math.random();
+      return Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2) * 15 + 50;
+    });
+  } else if (distribution === "Uniform") {
+    return Array.from({ length: n }, () => Math.random() * 100);
+  } else {
+    return Array.from({ length: n }, () => -Math.log(Math.random()) * 20);
+  }
+})()
+
+statValues = {
+  const sorted = [...statData].sort((a, b) => a - b);
+  const mean = statData.reduce((s, v) => s + v, 0) / statData.length;
+  const variance = statData.reduce((s, v) => s + (v - mean) ** 2, 0) / statData.length;
+  const median = sorted[Math.floor(sorted.length / 2)];
+  const q1 = sorted[Math.floor(sorted.length * 0.25)];
+  const q3 = sorted[Math.floor(sorted.length * 0.75)];
+  return {
+    mean: mean.toFixed(2),
+    median: median.toFixed(2),
+    std: Math.sqrt(variance).toFixed(2),
+    min: Math.min(...statData).toFixed(2),
+    max: Math.max(...statData).toFixed(2),
+    q1: q1.toFixed(2),
+    q3: q3.toFixed(2)
+  };
+}
+```
+
+```{ojs}
+html`<div class="stats-grid">
+  ${Object.entries(statValues).map(([k, v]) =>
+    `<div class="stat-card">
+      <div class="stat-label">${k.toUpperCase()}</div>
+      <div class="stat-value">${v}</div>
+    </div>`
+  ).join('')}
+</div>`
+```
+
+```{ojs}
+Plot.plot({
+  title: `${distribution} Distribution (n = ${statSampleSize})`,
+  marks: [
+    Plot.rectY(statData, Plot.binX({ y: "count" }, { x: d => d, fill: "steelblue", tip: true })),
+    Plot.ruleY([0])
+  ]
+})
+```

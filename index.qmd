@@ -1,0 +1,106 @@
+---
+title: "Welcome to the Interactive Dynamic Website Template"
+description: "A demonstration of Quarto's interactive and dynamic capabilities"
+---
+
+## Introduction
+
+This is a template for building **interactive, dynamic websites** using [Quarto](https://quarto.org). Quarto provides a powerful authoring framework that lets you combine text, code, and interactive visualizations into a single, reproducible document.
+
+### What's Included
+
+Explore the pages in this template to see different capabilities:
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### 📊 Data Visualization
+Interactive charts and plots powered by Observable JS. [Explore →](data-viz.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### 🎛️ Interactive Widgets
+Dynamic inputs, sliders, and reactive displays. [Explore →](widgets.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### ℹ️ About
+Learn more about this template and how to customize it. [Explore →](about.qmd)
+:::
+
+:::
+
+---
+
+## Live Demo: Dynamic Counter
+
+The following is a simple interactive element using Observable JS — no server required:
+
+```{ojs}
+viewof count = Inputs.range([0, 100], {
+  label: "Choose a number",
+  step: 1,
+  value: 42
+})
+```
+
+```{ojs}
+html`<div class="callout callout-style-default callout-tip">
+  <div class="callout-body">
+    <p>You selected: <strong>${count}</strong></p>
+    <p>Its square is: <strong>${count * count}</strong></p>
+    <p>Its square root is: <strong>${Math.sqrt(count).toFixed(4)}</strong></p>
+  </div>
+</div>`
+```
+
+---
+
+## Live Demo: Interactive Color Mixer
+
+Mix colors interactively using sliders:
+
+```{ojs}
+viewof red = Inputs.range([0, 255], { label: "Red", step: 1, value: 100 })
+viewof green = Inputs.range([0, 255], { label: "Green", step: 1, value: 149 })
+viewof blue = Inputs.range([0, 255], { label: "Blue", step: 1, value: 237 })
+```
+
+```{ojs}
+colorHex = `#${red.toString(16).padStart(2, '0')}${green.toString(16).padStart(2, '0')}${blue.toString(16).padStart(2, '0')}`
+
+html`<div style="
+  background-color: ${colorHex};
+  color: ${(red * 0.299 + green * 0.587 + blue * 0.114) > 128 ? '#000' : '#fff'};
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+">
+  ${colorHex.toUpperCase()}
+  <br>
+  <span style="font-size: 0.9rem; font-weight: normal;">
+    rgb(${red}, ${green}, ${blue})
+  </span>
+</div>`
+```
+
+---
+
+## Getting Started
+
+To use this template for your own project:
+
+1. **Fork or clone** this repository
+2. **Customize** the content in `.qmd` files
+3. **Configure** `_quarto.yml` for your project settings
+4. **Deploy** automatically to GitHub Pages via the included workflow
+
+::: {.callout-tip}
+## Quarto Resources
+- [Quarto Documentation](https://quarto.org/docs/guide/)
+- [Observable JS in Quarto](https://quarto.org/docs/interactive/ojs/)
+- [GitHub Pages Deployment](https://quarto.org/docs/publishing/github-pages.html)
+:::
