@@ -1,154 +1,81 @@
 ---
-title: "About This Template"
-description: "Learn how to use and customize this Quarto website template"
+title: "About the ASM-TMC Chapter"
+description: "Learn about the American Society of Microbiology – Texas Medical Center Chapter, our leadership, and how to get involved."
 ---
 
-## About This Template
+## Who We Are
 
-This is a template for creating **interactive, dynamic websites** using [Quarto](https://quarto.org). It demonstrates how to build web applications that are:
+The **American Society of Microbiology – Texas Medical Center (ASM-TMC) Chapter** is a professional scientific organization serving microbiologists, infectious-disease researchers, and biomedical scientists across the Houston area and the Texas Medical Center.
 
-- 🚀 **Fast** — Static site generation with no backend server required
-- 🎛️ **Interactive** — Client-side reactivity via Observable JS
-- 📊 **Data-driven** — Built-in support for charts, tables, and visualizations
-- 🌙 **Themeable** — Light/dark mode toggle included
-- 🔍 **Searchable** — Full-text search across all pages
-- 📱 **Responsive** — Mobile-friendly layout out of the box
+We are a local chapter of the [American Society of Microbiology (ASM)](https://asm.org/), the oldest and largest single life-science membership organization in the world, with more than 30,000 members across 120 countries.
 
 ---
 
-## Technology Stack
+## Our Mission
 
-| Technology | Purpose |
-|---|---|
-| [Quarto](https://quarto.org) | Document authoring and site generation |
-| [Observable JS](https://observablehq.com) | Client-side interactivity and reactivity |
-| [Observable Plot](https://observablehq.com/plot/) | Data visualization library |
-| [Bootstrap](https://getbootstrap.com) | CSS framework (via Quarto themes) |
-| [GitHub Actions](https://github.com/features/actions) | Automated CI/CD pipeline |
-| [GitHub Pages](https://pages.github.com) | Static site hosting |
+> *To advance the microbiological sciences through the promotion of scientific knowledge and its application for the improvement of health and environmental well-being.*
 
----
+The ASM-TMC Chapter fulfills this mission locally by:
 
-## Project Structure
-
-```
-.
-├── _quarto.yml          # Site configuration
-├── index.qmd            # Home page
-├── data-viz.qmd         # Data visualization page
-├── widgets.qmd          # Interactive widgets page
-├── about.qmd            # This page
-├── styles.css           # Custom CSS styles
-└── .github/
-    └── workflows/
-        └── publish.yml  # GitHub Pages deployment
-```
+- Organizing scientific **seminars, symposia, and journal clubs** at TMC institutions
+- Hosting **networking and social events** to connect researchers at all career levels
+- Offering **professional-development programming** (career panels, grant-writing workshops, science communication training)
+- Providing **community outreach** to promote microbiology and STEM education in the Houston area
 
 ---
 
-## How to Use This Template
+## Chapter Leadership
 
-### 1. Fork or Clone the Repository
+| Role | Name | Institution |
+|---|---|---|
+| **President** | *TBD* | — |
+| **Vice President** | *TBD* | — |
+| **Secretary** | *TBD* | — |
+| **Treasurer** | *TBD* | — |
+| **Events Coordinator** | *TBD* | — |
+| **Communications Officer** | *TBD* | — |
+| **Faculty Advisor** | *TBD* | — |
 
-```bash
-git clone https://github.com/JacobKMcPherson/template_interactive_dynamic_website.git
-cd template_interactive_dynamic_website
-```
-
-### 2. Install Quarto
-
-Download and install Quarto from [quarto.org/docs/get-started](https://quarto.org/docs/get-started/).
-
-### 3. Preview Locally
-
-```bash
-quarto preview
-```
-
-This will start a local development server at `http://localhost:4848`.
-
-### 4. Add Your Content
-
-Create new `.qmd` files and add them to the `navbar` in `_quarto.yml`:
-
-```yaml
-website:
-  navbar:
-    left:
-      - href: your-new-page.qmd
-        text: Your Page
-```
-
-### 5. Build the Site
-
-```bash
-quarto render
-```
-
-The output will be in the `_site/` directory.
-
-### 6. Deploy to GitHub Pages
-
-Push your changes to the main branch. The GitHub Actions workflow in `.github/workflows/publish.yml` will automatically build and deploy your site to GitHub Pages.
-
-::: {.callout-important}
-## First-Time Setup
-Before the GitHub Actions workflow can deploy to GitHub Pages, you need to enable GitHub Pages in your repository settings:
-
-1. Go to **Settings → Pages**
-2. Under **Source**, select **GitHub Actions**
-3. Save the settings
+::: {.callout-note}
+## Want to Join the Leadership Team?
+We are always looking for motivated volunteers to help run the chapter. Contact us at the email below if you are interested in taking on a leadership role.
 :::
 
 ---
 
-## Customization
+## Member Institutions
 
-### Changing the Theme
+The ASM-TMC Chapter draws members from institutions across the Texas Medical Center and greater Houston area, including:
 
-Edit `_quarto.yml` to change the color theme:
-
-```yaml
-format:
-  html:
-    theme:
-      light: flatly    # Change to: cosmo, litera, minty, etc.
-      dark: darkly     # Change to: cyborg, slate, vapor, etc.
-```
-
-See all available themes at [quarto.org/docs/output-formats/html-themes](https://quarto.org/docs/output-formats/html-themes.html).
-
-### Adding Interactive Elements
-
-Use Observable JS code blocks (` ```{ojs} `) to add interactive elements:
-
-```{ojs}
-//| echo: true
-viewof mySlider = Inputs.range([0, 100], { label: "Value", value: 50 })
-```
-
-```{ojs}
-//| echo: true
-html`<p>You selected: <strong>${mySlider}</strong></p>`
-```
-
-### Navigation Structure
-
-The site uses a top navigation bar. Customize it in `_quarto.yml`:
-
-```yaml
-website:
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-    right:
-      - icon: github
-        href: https://github.com/your-repo
-```
+- Baylor College of Medicine (BCM)
+- The University of Texas Health Science Center at Houston (UTHealth Houston)
+- The University of Texas MD Anderson Cancer Center
+- Houston Methodist Research Institute
+- Rice University
+- University of Houston
+- Texas Southern University
 
 ---
 
-## License
+## Affiliation with National ASM
 
-This template is released under the [MIT License](https://github.com/JacobKMcPherson/template_interactive_dynamic_website/blob/main/LICENSE).
+As a chartered chapter of the ASM, we operate under national ASM guidelines and benefit from:
+
+- Access to national ASM resources, grants, and award programs
+- Representation at the **ASM Microbe** annual meeting
+- Eligibility for chapter-level funding and support
+- A direct connection to a global network of microbiologists
+
+Learn more about ASM at [asm.org](https://asm.org/).
+
+---
+
+## Contact Us
+
+Have questions about the chapter, upcoming events, or membership? We'd love to hear from you.
+
+- 📧 **Email:** [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com)
+- 🐙 **GitHub:** [github.com/JacobKMcPherson/asm-tmc.github.io](https://github.com/JacobKMcPherson/asm-tmc.github.io)
+
+To join the chapter mailing list and receive event announcements, send an email with the subject line **"Subscribe"** to the address above.
+
