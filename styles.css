@@ -484,3 +484,37 @@ pre { border-radius: 6px; }
 .member-link-orcid:hover    { background: #8ab62d; color: #fff; }
 .member-link-email:hover    { background: var(--asm-orange); color: #fff; }
 .orcid-icon-text            { font-size: 0.65rem; font-weight: 800; line-height: 1; }
+
+@media (min-width: 768px) {
+  #quarto-content.quarto-container.page-layout-article {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    grid-template-columns:
+      [screen-start] 10vw
+      [screen-start-inset page-start page-start-inset] 10vw
+      [body-start-outset body-start body-content-start] minmax(0, 60vw)
+      [body-content-end] 10vw
+      [body-end body-end-outset] 10vw
+      [page-end-inset page-end screen-end-inset screen-end] !important;
+  }
+
+  #quarto-content.quarto-container.page-layout-article > main.content,
+  #quarto-content.quarto-container.page-layout-article > #quarto-margin-sidebar,
+  #quarto-sidebar,
+  .sidebar:not(.margin-sidebar) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #quarto-content.quarto-container.page-layout-article > #quarto-margin-sidebar {
+    grid-column: body-end / page-end !important;
+    justify-self: stretch !important;
+  }
+
+  #quarto-sidebar,
+  .sidebar:not(.margin-sidebar) {
+    grid-column: screen-start / page-start !important;
+  }
+}
