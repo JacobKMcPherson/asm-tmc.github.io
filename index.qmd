@@ -1,5 +1,5 @@
 ---
-title: "American Society of Microbiology – Texas Medical Center Chapter"
+title: "American Society of Microbiology –<br>Texas Medical Center Chapter"
 description: "Connecting microbiologists across the Texas Medical Center"
 toc: false
 ---
@@ -235,4 +235,3 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
   </div>
 </div>
 ```
-
