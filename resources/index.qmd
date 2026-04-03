@@ -7,6 +7,14 @@ This page collects key resources for students, postdocs, and faculty in the micr
 
 ---
 
+## Editors in Conversation — ASM Podcast
+
+The latest episodes from ASM's *Editors in Conversation*, featuring journal editors discussing cutting-edge microbiology research:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+
 ## Find a Resource
 
 ```{ojs}
@@ -123,12 +131,6 @@ As a member of the national ASM, you gain access to:
 Join or renew at [asm.org/membership](https://asm.org/membership).
 
 ---
-
-## Editors in Conversation — ASM Podcast
-
-The latest episodes from ASM's *Editors in Conversation*, featuring journal editors discussing cutting-edge microbiology research:
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ::: {.callout-tip}
 ## Suggest a Resource
