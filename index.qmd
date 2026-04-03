@@ -1,5 +1,5 @@
 ---
-title: "American Society of Microbiology –<br>Texas Medical Center Chapter"
+title: "American Society of Microbiology – <span class='home-title-second-line'>Texas Medical Center Chapter</span>"
 description: "Connecting microbiologists across the Texas Medical Center"
 toc: false
 ---

@@ -485,6 +485,16 @@ pre { border-radius: 6px; }
 .member-link-email:hover    { background: var(--asm-orange); color: #fff; }
 .orcid-icon-text            { font-size: 0.65rem; font-weight: 800; line-height: 1; }
 
+#title-block-header .title .home-title-second-line {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  #title-block-header .title .home-title-second-line {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   #quarto-content.quarto-container.page-layout-article {
     width: 100vw !important;
