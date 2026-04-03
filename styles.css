@@ -186,6 +186,37 @@ pre { border-radius: 6px; }
 /* ── Callouts ────────────────────────────────────────────────────────────── */
 .callout { border-radius: 6px; }
 
+.home-next-event {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.25rem;
+  border-left: 0.35rem solid #b22222;
+  border-radius: 6px;
+  background: #fdecea;
+}
+
+.home-next-event h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.home-next-event h3 a {
+  color: #8b1e1e;
+  text-decoration: none;
+}
+
+.home-next-event h3 a:hover,
+.home-next-event h3 a:focus {
+  text-decoration: underline;
+}
+
+.home-upcoming-events {
+  padding-left: 1.25rem;
+}
+
+.home-upcoming-events li + li {
+  margin-top: 0.35rem;
+}
+
 /* ── ICS / calendar download button ─────────────────────────────────────── */
 .ics-btn {
   margin-top: 0.75rem;
