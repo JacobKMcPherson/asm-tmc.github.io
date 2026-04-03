@@ -55,8 +55,10 @@ Providing professional-development resources—grant writing, science communicat
 Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar.
 
 ```{=html}
-<div id="homepage-next-event"></div>
-<div id="homepage-upcoming-events-list"></div>
+<div class="home-events-grid">
+  <div id="homepage-next-event"></div>
+  <div id="homepage-upcoming-events-list"></div>
+</div>
 <script src="events/asm-events.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -120,29 +122,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Stay current with the latest in microbiology and infectious disease through these podcasts:
 
+::: {.podcast-grid}
+
+::: {.podcast-card}
 ### Editors in Conversation — ASM Podcast
 
 Listen to the latest episodes of ASM's *Editors in Conversation*, where journal editors discuss cutting-edge microbiology research:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
 
+::: {.podcast-card}
 ### SIDP Breakpoints
 
 The official podcast of the Society of Infectious Diseases Pharmacists (SIDP), covering antimicrobial stewardship and infectious diseases pharmacy:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1D79kHPArirj7kVhQUBBCE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
 
+::: {.podcast-card}
 ### IDSA Let's Talk ID
 
 The Infectious Diseases Society of America's podcast featuring expert discussions on infectious disease topics:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6nMGZTc5BYJ1Yj5bYnxvNU?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
 
+::: {.podcast-card}
 ### MicrobeTV Puscast
 
 MicrobeTV's weekly podcast summarizing the latest research in infectious disease:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+:::
 
 ---
 

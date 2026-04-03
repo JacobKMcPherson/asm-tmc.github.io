@@ -22,7 +22,8 @@
   padding: 4rem 2rem 3rem;
   text-align: center;
   border-radius: 8px;
-  margin-bottom: 2rem;
+  width: 50%;
+  margin: 0 auto 2rem;
 }
 
 .hero-title {
@@ -108,8 +109,8 @@
 
 /* ── Resource cards (resources page) ────────────────────────────────────── */
 .resource-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
   margin: 1rem 0;
 }
@@ -187,11 +188,18 @@ pre { border-radius: 6px; }
 .callout { border-radius: 6px; }
 
 .home-next-event {
-  margin: 1rem 0 1.25rem;
+  margin: 0;
   padding: 1rem 1.25rem;
   border-left: 0.35rem solid #b22222;
   border-radius: 6px;
   background: #fdecea;
+}
+
+.home-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
 }
 
 .home-next-event h3 {
@@ -215,6 +223,39 @@ pre { border-radius: 6px; }
 
 .home-upcoming-events li + li {
   margin-top: 0.35rem;
+}
+
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.podcast-card {
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.podcast-card h3 {
+  margin-top: 0;
+}
+
+.events-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.events-calendar-column #event-calendar {
+  max-width: 100%;
+}
+
+.events-upcoming-column {
+  margin-top: 0.25rem;
 }
 
 /* ── ICS / calendar download button ─────────────────────────────────────── */
@@ -250,6 +291,19 @@ pre { border-radius: 6px; }
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin: 1.5rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .hero-banner {
+    width: 100%;
+  }
+
+  .resource-list,
+  .home-events-grid,
+  .podcast-grid,
+  .events-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .social-feed-card {

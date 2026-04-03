@@ -10,17 +10,20 @@ toc: false
 <link  href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
-<div class="fc-legend mb-2">
-  <span class="fc-legend-dot" style="background:#003087;"></span> Symposium &nbsp;
-  <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
-  <span class="fc-legend-dot" style="background:#e8740c;"></span> Networking &nbsp;
-  <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop
+<div class="events-layout">
+  <div class="events-calendar-column">
+    <div class="fc-legend mb-2">
+      <span class="fc-legend-dot" style="background:#003087;"></span> Symposium &nbsp;
+      <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
+      <span class="fc-legend-dot" style="background:#e8740c;"></span> Networking &nbsp;
+      <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop
+    </div>
+    <div id="event-calendar"></div>
+  </div>
+
+  <!-- Upcoming Events listing rendered from the same data source -->
+  <div id="upcoming-events-list" class="events-upcoming-column"></div>
 </div>
-
-<div id="event-calendar" style="max-width:900px; margin:0 auto;"></div>
-
-<!-- Upcoming Events listing rendered from the same data source -->
-<div id="upcoming-events-list" style="margin-top:2rem;"></div>
 
 <script src="asm-events.js"></script>
 <script>
