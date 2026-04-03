@@ -7,6 +7,14 @@ This page collects key resources for students, postdocs, and faculty in the micr
 
 ---
 
+## Editors in Conversation — ASM Podcast
+
+The latest episodes from ASM's *Editors in Conversation*, featuring journal editors discussing cutting-edge microbiology research:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+
 ## Find a Resource
 
 ```{ojs}
@@ -19,6 +27,9 @@ allResources = [
   { name: "Antimicrobial Agents and Chemotherapy", category: "Journal", audience: "All", description: "ASM journal covering antimicrobial resistance, drug development, and treatment.", url: "https://journals.asm.org/journal/aac" },
   { name: "Journal of Virology", category: "Journal", audience: "All", description: "ASM journal covering all aspects of virology.", url: "https://journals.asm.org/journal/jvi" },
   { name: "Microbiology Spectrum", category: "Journal", audience: "All", description: "ASM open-access journal with review articles across all microbiology disciplines.", url: "https://journals.asm.org/journal/spectrum" },
+  { name: "Nature Reviews Microbiology", category: "Journal", audience: "All", description: "Leading review journal covering all microbiology subfields.", url: "https://www.nature.com/nrmicro/" },
+  { name: "Cell Host & Microbe", category: "Journal", audience: "All", description: "High-impact journal covering host–microbe interactions, microbiome, and infectious disease.", url: "https://www.cell.com/cell-host-microbe/home" },
+  { name: "PLOS Pathogens", category: "Journal", audience: "All", description: "Open-access research on bacteria, fungi, parasites, prions, and viruses.", url: "https://journals.plos.org/plospathogens/" },
   // Funding
   { name: "NIH Reporter", category: "Funding", audience: "All", description: "Search active and past NIH-funded research projects.", url: "https://reporter.nih.gov/" },
   { name: "ASM Undergraduate Research Fellowship", category: "Funding", audience: "Students", description: "ASM fellowship supporting undergraduate research in microbiology.", url: "https://asm.org/Fellowships/ASM-Undergraduate-Research-Fellowship" },
@@ -35,7 +46,6 @@ allResources = [
   { name: "ASM Career Center", category: "Career", audience: "All", description: "Job board and career resources for microbiologists.", url: "https://careers.asm.org/" },
   { name: "myIDP (Individual Development Plan)", category: "Career", audience: "Students", description: "Science careers IDP tool to help graduate students and postdocs plan their careers.", url: "https://myidp.sciencecareers.org/" },
   { name: "AAAS Science Careers", category: "Career", audience: "All", description: "Career resources and job listings for scientists from Science/AAAS.", url: "https://www.sciencecareers.org/" },
-  { name: "Cheeky Scientist", category: "Career", audience: "Postdocs", description: "Industry transition resources and training for PhDs.", url: "https://cheekyscientist.com/" },
   // TMC / Local
   { name: "Texas Medical Center", category: "Local", audience: "All", description: "Official TMC website with information on institutions, events, and innovation.", url: "https://www.tmc.edu/" },
   { name: "BCM Graduate School", category: "Local", audience: "Students", description: "Baylor College of Medicine graduate programs in biomedical sciences.", url: "https://www.bcm.edu/education/graduate-school-of-biomedical-sciences" },
@@ -121,15 +131,6 @@ As a member of the national ASM, you gain access to:
 Join or renew at [asm.org/membership](https://asm.org/membership).
 
 ---
-
-## Suggested Reading
-
-Selected high-impact reviews and resources for staying current in microbiology:
-
-- [*Nature Reviews Microbiology*](https://www.nature.com/nrmicro/) — leading review journal covering all microbiology subfields
-- [*Cell Host & Microbe*](https://www.cell.com/cell-host-microbe/home) — host–microbe interactions, microbiome, infectious disease
-- [*PLOS Pathogens*](https://journals.plos.org/plospathogens/) — open-access research on pathogens
-- [ASM Podcasts](https://asm.org/Podcasts) — *This Week in Microbiology*, *This Week in Virology*, and more
 
 ::: {.callout-tip}
 ## Suggest a Resource

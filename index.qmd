@@ -50,6 +50,14 @@ Providing professional-development resources—grant writing, science communicat
 
 ---
 
+## Editors in Conversation — ASM Podcast
+
+Listen to the latest episodes of ASM's *Editors in Conversation*, where journal editors discuss cutting-edge microbiology research:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+
 ## Upcoming Events
 
 Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar.
@@ -118,9 +126,9 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
       <a class="twitter-timeline"
          data-height="450"
          data-theme="light"
-         data-chrome="noheader nofooter noborders"
-         href="https://twitter.com/asm_tmc?ref_src=twsrc%5Etfw">
-        Tweets by asm_tmc
+         data-chrome="noheader nofooter noborders transparent"
+         href="https://x.com/asm_tmc">
+        Posts by @asm_tmc
       </a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
@@ -132,7 +140,7 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
       <i class="bi bi-instagram"></i>
       <span>@asm_tmc on Instagram</span>
     </div>
-    <div class="instagram-feed-wrapper">
+    <div class="social-follow-wrapper">
       <p class="social-feed-desc">
         Follow us on Instagram for behind-the-scenes photos, event highlights, and microbiology content from the Texas Medical Center community.
       </p>
@@ -146,6 +154,54 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
       <p class="social-feed-note">
         <i class="bi bi-bell me-1"></i>
         Turn on post notifications so you never miss an event announcement or research spotlight.
+      </p>
+    </div>
+  </div>
+
+  <!-- Facebook follow card -->
+  <div class="social-feed-card">
+    <div class="social-feed-header">
+      <i class="bi bi-facebook"></i>
+      <span>ASM-TMC on Facebook</span>
+    </div>
+    <div class="social-follow-wrapper">
+      <p class="social-feed-desc">
+        Like our Facebook page to stay informed about chapter events, announcements, and news from the broader ASM community.
+      </p>
+      <a href="https://www.facebook.com/asm.tmc.chapter"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-facebook">
+        <i class="bi bi-facebook me-2"></i>Like our Page
+      </a>
+      <hr class="social-divider">
+      <p class="social-feed-note">
+        <i class="bi bi-bell me-1"></i>
+        Turn on notifications so you never miss an event announcement.
+      </p>
+    </div>
+  </div>
+
+  <!-- LinkedIn follow card -->
+  <div class="social-feed-card">
+    <div class="social-feed-header">
+      <i class="bi bi-linkedin"></i>
+      <span>ASM-TMC on LinkedIn</span>
+    </div>
+    <div class="social-follow-wrapper">
+      <p class="social-feed-desc">
+        Follow our LinkedIn page for professional updates, career opportunities, and networking with microbiologists across the Texas Medical Center.
+      </p>
+      <a href="https://www.linkedin.com/company/asm-tmc"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-linkedin">
+        <i class="bi bi-linkedin me-2"></i>Follow on LinkedIn
+      </a>
+      <hr class="social-divider">
+      <p class="social-feed-note">
+        <i class="bi bi-briefcase me-1"></i>
+        Connect with fellow microbiologists and discover new career opportunities.
       </p>
     </div>
   </div>

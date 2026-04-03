@@ -1,0 +1,295 @@
+---
+title: "Members"
+description: "Current and former members of the ASM-TMC Chapter"
+toc: false
+---
+
+Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our community spans students, postdoctoral researchers, faculty, and industry professionals across the Texas Medical Center.
+
+---
+
+## Current Members
+
+```{=html}
+<div class="members-grid">
+
+  <!-- Member card – placeholder 1 -->
+  <div class="member-card">
+    <div class="member-avatar">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Jane Doe, Ph.D.</h3>
+      <p class="member-role">President · Postdoctoral Researcher</p>
+      <p class="member-institution">Baylor College of Medicine</p>
+      <p class="member-bio">
+        Research focus: host–pathogen interactions in <em>Staphylococcus aureus</em> infections.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member card – placeholder 2 -->
+  <div class="member-card">
+    <div class="member-avatar">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">John Smith, Ph.D.</h3>
+      <p class="member-role">Vice President · Graduate Student</p>
+      <p class="member-institution">UTHealth Houston</p>
+      <p class="member-bio">
+        Research focus: antimicrobial resistance mechanisms in Gram-negative bacteria.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member card – placeholder 3 -->
+  <div class="member-card">
+    <div class="member-avatar">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Maria Garcia, M.D., Ph.D.</h3>
+      <p class="member-role">Secretary · Clinical Research Fellow</p>
+      <p class="member-institution">MD Anderson Cancer Center</p>
+      <p class="member-bio">
+        Research focus: microbiome–immunotherapy interactions in oncology patients.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member card – placeholder 4 -->
+  <div class="member-card">
+    <div class="member-avatar">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">David Lee, Ph.D.</h3>
+      <p class="member-role">Treasurer · Industry Scientist</p>
+      <p class="member-institution">Houston Methodist Research Institute</p>
+      <p class="member-bio">
+        Research focus: translational virology and antiviral drug development.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member card – placeholder 5 -->
+  <div class="member-card">
+    <div class="member-avatar">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Sarah Kim, Ph.D.</h3>
+      <p class="member-role">Events Coordinator · Postdoctoral Researcher</p>
+      <p class="member-institution">Rice University</p>
+      <p class="member-bio">
+        Research focus: environmental microbiology and microbial ecology of urban waterways.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member card – placeholder 6 -->
+  <div class="member-card">
+    <div class="member-avatar">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Alex Patel, Ph.D.</h3>
+      <p class="member-role">Communications Officer · Graduate Student</p>
+      <p class="member-institution">University of Houston</p>
+      <p class="member-bio">
+        Research focus: CRISPR-based diagnostics for rapid infectious disease detection.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+---
+
+## Former Members
+
+```{=html}
+<div class="members-grid members-grid-former">
+
+  <!-- Former member – placeholder 1 -->
+  <div class="member-card member-card-former">
+    <div class="member-avatar member-avatar-former">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Robert Chen, Ph.D.</h3>
+      <p class="member-role">Former President (2023–2024)</p>
+      <p class="member-institution">Currently: Assistant Professor, Texas Southern University</p>
+      <p class="member-bio">
+        Research focus: bacterial biofilm formation and antibiotic tolerance.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Former member – placeholder 2 -->
+  <div class="member-card member-card-former">
+    <div class="member-avatar member-avatar-former">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Emily Torres, Ph.D.</h3>
+      <p class="member-role">Former Vice President (2023–2024)</p>
+      <p class="member-institution">Currently: Research Scientist, Biotech Industry</p>
+      <p class="member-bio">
+        Research focus: viral immunology and vaccine development.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Former member – placeholder 3 -->
+  <div class="member-card member-card-former">
+    <div class="member-avatar member-avatar-former">
+      <i class="bi bi-person-circle"></i>
+    </div>
+    <div class="member-info">
+      <h3 class="member-name">Michael Brown, Ph.D.</h3>
+      <p class="member-role">Former Events Coordinator (2022–2024)</p>
+      <p class="member-institution">Currently: Postdoctoral Fellow, NIH</p>
+      <p class="member-bio">
+        Research focus: fungal pathogenesis and innate immune evasion.
+      </p>
+      <div class="member-links">
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" class="member-link member-link-x" title="X (Twitter)" aria-label="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="member-link member-link-bluesky" title="BlueSky" aria-label="BlueSky">
+          <i class="bi bi-cloud-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+---
+
+::: {.callout-tip}
+## Join the ASM-TMC Chapter
+Interested in becoming a member? Membership is open to anyone in the microbiological sciences. Reach out via the [About page](../about.qmd) or email us at [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com).
+:::
