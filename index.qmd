@@ -1,5 +1,5 @@
 ---
-title: "American Society of Microbiology – Texas Medical Center Chapter"
+title: "American Society of Microbiology – <span class='home-title-second-line'>Texas Medical Center Chapter</span>"
 description: "Connecting microbiologists across the Texas Medical Center"
 toc: false
 ---
@@ -50,6 +50,72 @@ Providing professional-development resources—grant writing, science communicat
 
 ---
 
+## Upcoming Events
+
+Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar.
+
+```{=html}
+<div id="homepage-next-event"></div>
+<div id="homepage-upcoming-events-list"></div>
+<script src="events/asm-events.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const events = Array.isArray(window.ASM_EVENTS) ? window.ASM_EVENTS : [];
+  const nextContainer = document.getElementById('homepage-next-event');
+  const listContainer = document.getElementById('homepage-upcoming-events-list');
+  if (!nextContainer || !listContainer) return;
+
+  const escapeHtml = (value) => String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+  const formatDate = (start) => new Date(start + 'T00:00:00').toLocaleDateString(
+    'en-US',
+    { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+  );
+
+  const upcoming = events
+    .filter((event) => event.isUpcoming)
+    .sort((a, b) => new Date(a.start) - new Date(b.start));
+
+  if (!upcoming.length) {
+    nextContainer.innerHTML = '<p class="text-muted">No upcoming events scheduled at this time. Check back soon!</p>';
+    listContainer.innerHTML = '';
+    return;
+  }
+
+  const nextEvent = upcoming[0];
+  const nextProps = nextEvent.extendedProps || {};
+
+  nextContainer.innerHTML =
+    '<div class="home-next-event">'
+    + '<h3><a href="events/index.html#calendar">🚩 📅 Next Event</a></h3>'
+    + '<p><strong>' + escapeHtml(nextEvent.title) + '</strong>'
+    + (nextProps.description ? ' — <em>' + escapeHtml(nextProps.description) + '</em>' : '')
+    + '<br>🗓 <strong>Date:</strong> ' + formatDate(nextEvent.start)
+    + '<br>📍 <strong>Location:</strong> ' + escapeHtml(nextProps.location || 'TBD')
+    + '</p></div>';
+
+  let listHtml = '<ul class="home-upcoming-events">';
+  upcoming.forEach((event) => {
+    const props = event.extendedProps || {};
+    listHtml += '<li>'
+      + '<a href="events/index.html#calendar"><strong>' + escapeHtml(event.title) + '</strong></a>'
+      + ' — ' + formatDate(event.start)
+      + (props.location ? ' · ' + escapeHtml(props.location) : '')
+      + '</li>';
+  });
+  listHtml += '</ul>';
+
+  listContainer.innerHTML = listHtml;
+});
+</script>
+```
+
+---
+
 ## Podcasts
 
 Stay current with the latest in microbiology and infectious disease through these podcasts:
@@ -77,19 +143,6 @@ The Infectious Diseases Society of America's podcast featuring expert discussion
 MicrobeTV's weekly podcast summarizing the latest research in infectious disease:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
----
-
-## Upcoming Events
-
-Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar.
-
-::: {.callout-note}
-## Next Event
-**Spring Symposium 2025** — *Frontiers in Infectious Disease*  
-🗓 Date: TBD | 📍 Location: Texas Medical Center, Houston, TX  
-Registration details will be announced on this page and via our mailing list.
-:::
 
 ---
 
@@ -235,4 +288,3 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
   </div>
 </div>
 ```
-

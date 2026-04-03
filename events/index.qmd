@@ -22,94 +22,45 @@ toc: false
 <!-- Upcoming Events listing rendered from the same data source -->
 <div id="upcoming-events-list" style="margin-top:2rem;"></div>
 
+<script src="asm-events.js"></script>
 <script>
-/* ── Single source of truth for all events ─────────────────────────────── */
-const ASM_EVENTS = [
-  /* ── 2025 upcoming ── */
-  { title: 'Monthly Seminar — April',   start: '2025-04-17', color: '#0054a6',
-    icsFile: null,
-    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
-                     type: 'seminar' } },
-  { title: 'Spring Symposium 2025',     start: '2025-05-16', color: '#003087',
-    icsFile: 'ics/spring-symposium-2025.ics',
-    extendedProps: { location: 'Texas Medical Center, Houston, TX',
-                     description: 'Frontiers in Infectious Disease',
-                     type: 'symposium' } },
-  { title: 'Monthly Seminar — May',     start: '2025-05-15', color: '#0054a6',
-    icsFile: 'ics/monthly-seminar-series.ics',
-    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
-                     type: 'seminar' } },
-  { title: 'Networking Mixer',          start: '2025-06-06', color: '#e8740c',
-    icsFile: 'ics/networking-mixer-2025.ics',
-    extendedProps: { location: 'Houston, TX', description: 'Meet the Chapter — informal gathering',
-                     type: 'networking' } },
-  { title: 'Monthly Seminar — June',    start: '2025-06-19', color: '#0054a6',
-    icsFile: 'ics/monthly-seminar-series.ics',
-    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
-                     type: 'seminar' } },
-  /* ── 2025 past ── */
-  { title: 'Monthly Seminar — March',   start: '2025-03-20', color: '#0054a6',
-    icsFile: null,
-    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
-                     type: 'seminar' } },
-  { title: 'Networking Mixer — March',  start: '2025-03-07', color: '#e8740c',
-    icsFile: null,
-    extendedProps: { location: 'Houston, TX', description: 'Informal meet-and-greet',
-                     type: 'networking' } },
-  { title: 'Monthly Seminar — Feb',     start: '2025-02-20', color: '#0054a6',
-    icsFile: null,
-    extendedProps: { location: 'Rotating TMC venue', description: 'Research talk by TMC investigator',
-                     type: 'seminar' } },
-  { title: 'Grant Writing Workshop',    start: '2025-02-07', color: '#2e7d32',
-    icsFile: null,
-    extendedProps: { location: 'Texas Medical Center', description: 'NIH grant writing fundamentals',
-                     type: 'workshop' } },
-  /* ── 2024 ── */
-  { title: 'Career Panel 2024',         start: '2024-11-15', color: '#2e7d32',
-    icsFile: null,
-    extendedProps: { location: 'Texas Medical Center', description: 'Industry vs. academia: perspectives from microbiologists',
-                     type: 'workshop' } },
-  { title: 'Fall Symposium 2024',       start: '2024-10-18', color: '#003087',
-    icsFile: null,
-    extendedProps: { location: 'Texas Medical Center, Houston, TX', description: 'Antimicrobial Resistance',
-                     type: 'symposium' } },
-  { title: 'Fall Kickoff Mixer 2024',   start: '2024-09-06', color: '#e8740c',
-    icsFile: null,
-    extendedProps: { location: 'Houston, TX', description: 'Chapter kickoff and new member welcome',
-                     type: 'networking' } }
-];
-
 /* ── Render FullCalendar ────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
+  const ASM_EVENTS = Array.isArray(window.ASM_EVENTS) ? window.ASM_EVENTS : [];
+  const escapeHtml = (value) => String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
   const calEl    = document.getElementById('event-calendar');
-  const calendar = new FullCalendar.Calendar(calEl, {
-    initialView: 'dayGridMonth',
-    headerToolbar: {
-      left:   'prev,next today',
-      center: 'title',
-      right:  'dayGridMonth,listYear'
-    },
-    height: 'auto',
-    events: ASM_EVENTS,
-    eventClick: (info) => {
-      const p   = info.event.extendedProps;
-      const msg = info.event.title
-              + (p.location    ? '\n📍 ' + p.location    : '')
-              + (p.description ? '\n📝 ' + p.description : '');
-      alert(msg);
-    },
-    eventMouseEnter: (info) => {
-      info.el.title = info.event.extendedProps.description || '';
-    }
-  });
-  calendar.render();
+  if (window.FullCalendar && calEl) {
+    const calendar = new FullCalendar.Calendar(calEl, {
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left:   'prev,next today',
+        center: 'title',
+        right:  'dayGridMonth,listYear'
+      },
+      height: 'auto',
+      events: ASM_EVENTS,
+      eventClick: (info) => {
+        const p   = info.event.extendedProps;
+        const msg = info.event.title
+                + (p.location    ? '\n📍 ' + p.location    : '')
+                + (p.description ? '\n📝 ' + p.description : '');
+        alert(msg);
+      },
+      eventMouseEnter: (info) => {
+        info.el.title = info.event.extendedProps.description || '';
+      }
+    });
+    calendar.render();
+  }
 
   /* ── Render Upcoming Events list from the same data ─────────────────── */
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
   const upcoming = ASM_EVENTS
-    .filter(e => new Date(e.start) >= today)
+    .filter((event) => event.isUpcoming)
     .sort((a, b) => new Date(a.start) - new Date(b.start));
 
   const container = document.getElementById('upcoming-events-list');
@@ -124,15 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const date    = new Date(ev.start + 'T00:00:00');
     const dateStr = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     const icsBtn  = ev.icsFile
-      ? '<a href="' + ev.icsFile + '" download class="btn btn-sm btn-outline-primary ics-btn mt-2">'
+      ? '<a href="' + escapeHtml(ev.icsFile) + '" download class="btn btn-sm btn-outline-primary ics-btn mt-2">'
         + '<i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)</a>'
       : '';
     html += '<div class="callout callout-style-default callout-note" style="margin-bottom:1rem;">'
-          + '<div class="callout-header"><strong>' + ev.title + '</strong></div>'
+          + '<div class="callout-header"><strong>' + escapeHtml(ev.title) + '</strong></div>'
           + '<div class="callout-body">'
           + '<p>🗓 <strong>Date:</strong> ' + dateStr + '<br>'
-          + '📍 <strong>Location:</strong> ' + (p.location || 'TBD') + '<br>'
-          + '📝 <strong>Description:</strong> ' + (p.description || '') + '</p>'
+          + '📍 <strong>Location:</strong> ' + escapeHtml(p.location || 'TBD') + '<br>'
+          + '📝 <strong>Description:</strong> ' + escapeHtml(p.description || '') + '</p>'
           + icsBtn
           + '</div></div>';
   });
