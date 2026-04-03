@@ -124,11 +124,11 @@ Join or renew at [asm.org/membership](https://asm.org/membership).
 
 ---
 
-## Suggested Reading
+## Editors in Conversation — ASM Podcast
 
-Selected podcasts and multimedia resources for staying current in microbiology:
+The latest episodes from ASM's *Editors in Conversation*, featuring journal editors discussing cutting-edge microbiology research:
 
-- [ASM Podcasts](https://asm.org/Podcasts) — *This Week in Microbiology*, *This Week in Virology*, and more
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ::: {.callout-tip}
 ## Suggest a Resource
