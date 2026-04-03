@@ -185,7 +185,25 @@ pre { border-radius: 6px; }
 /* ── Callouts ────────────────────────────────────────────────────────────── */
 .callout { border-radius: 6px; }
 
-/* ── Social media feeds (home page) ─────────────────────────────────────── */
+/* ── ICS / calendar download button ─────────────────────────────────────── */
+.ics-btn {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ── Blog listing page ───────────────────────────────────────────────────── */
+.quarto-listing-category-title { font-weight: 700; }
+.listing-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 .social-feeds-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

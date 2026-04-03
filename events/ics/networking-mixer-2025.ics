@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ASM-TMC Chapter//ASM-TMC Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ASM-TMC Networking Mixer
+X-WR-CALDESC:Networking Mixer — Meet the Chapter
+BEGIN:VEVENT
+UID:networking-mixer-2025@asm-tmc.github.io
+DTSTART:20250601T180000Z
+DTEND:20250601T200000Z
+DTSTAMP:20250101T000000Z
+SUMMARY:ASM-TMC Networking Mixer — Meet the Chapter
+DESCRIPTION:An informal gathering for current members\, new members\, and anyone interested in learning more about the ASM-TMC Chapter. Light refreshments provided.\n\nNote: Date is tentative (TBD). Check https://asm-tmc.github.io/events/ for the confirmed date and location.
+LOCATION:Houston\, TX
+URL:https://asm-tmc.github.io/events/
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR

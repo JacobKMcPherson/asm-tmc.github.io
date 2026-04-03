@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ASM-TMC Chapter//ASM-TMC Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ASM-TMC Monthly Seminar Series
+X-WR-CALDESC:Monthly Seminar Series — Microbiology at the TMC
+BEGIN:VEVENT
+UID:monthly-seminar-april-2025@asm-tmc.github.io
+DTSTART:20250415T170000Z
+DTEND:20250415T190000Z
+DTSTAMP:20250101T000000Z
+RRULE:FREQ=MONTHLY;COUNT=12
+SUMMARY:ASM-TMC Monthly Seminar — Microbiology at the TMC
+DESCRIPTION:Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking session.\n\nNote: Exact dates and venue rotate. Check https://asm-tmc.github.io/events/ for confirmed monthly details and speaker announcements.
+LOCATION:Rotating TMC Institutions\, Houston\, TX
+URL:https://asm-tmc.github.io/events/
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR
