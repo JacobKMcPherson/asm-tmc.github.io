@@ -11,7 +11,7 @@ The ASM-TMC Chapter hosts a variety of scientific and professional-development e
 
 ::: {.callout-note}
 ## Spring Symposium 2025 — *Frontiers in Infectious Disease*
-🗓 **Date:** TBD  
+🗓 **Date:** May 16, 2025  
 📍 **Location:** Texas Medical Center, Houston, TX  
 📝 **Description:** Our annual spring symposium will feature invited speakers working at the cutting edge of infectious-disease research, including sessions on antimicrobial resistance, host–pathogen interactions, and emerging pathogens.  
 Registration details will be announced via our mailing list. [Contact us](../about.qmd) to be added.
@@ -23,7 +23,7 @@ Registration details will be announced via our mailing list. [Contact us](../abo
 
 ::: {.callout-note}
 ## Seminar Series — *Microbiology at the TMC*
-🗓 **Frequency:** Monthly (dates TBD)  
+🗓 **Frequency:** Monthly (third Thursday)  
 📍 **Location:** Rotating TMC institutions  
 📝 **Description:** Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking.  
 [Subscribe to our mailing list](../about.qmd) to receive location and speaker announcements.
@@ -35,7 +35,7 @@ Registration details will be announced via our mailing list. [Contact us](../abo
 
 ::: {.callout-note}
 ## Networking Mixer — *Meet the Chapter*
-🗓 **Date:** TBD  
+🗓 **Date:** June 6, 2025  
 📍 **Location:** Houston, TX  
 📝 **Description:** An informal gathering for current members, new members, and anyone interested in learning more about the chapter. Light refreshments provided.
 
@@ -48,77 +48,75 @@ Registration details will be announced via our mailing list. [Contact us](../abo
 
 ## Event Calendar
 
-Use the interactive browser below to explore our events by type and month.
+```{=html}
+<!-- FullCalendar CDN -->
+<link  href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
-```{ojs}
-//| echo: false
-events = [
-  { name: "Spring Symposium 2025", type: "Symposium", month: "May", status: "Upcoming", description: "Annual symposium — Frontiers in Infectious Disease" },
-  { name: "Monthly Seminar — April", type: "Seminar", month: "April", status: "Upcoming", description: "Speaker TBA, rotating TMC venue" },
-  { name: "Networking Mixer", type: "Networking", month: "March", status: "Upcoming", description: "Informal meet-and-greet for new and current members" },
-  { name: "Monthly Seminar — March", type: "Seminar", month: "March", status: "Upcoming", description: "Speaker TBA, rotating TMC venue" },
-  { name: "Grant Writing Workshop", type: "Workshop", month: "February", status: "Past", description: "Professional development: NIH grant writing fundamentals" },
-  { name: "Monthly Seminar — February", type: "Seminar", month: "February", status: "Past", description: "Research talk by TMC investigator" },
-  { name: "Fall Kickoff Mixer 2024", type: "Networking", month: "September", status: "Past", description: "Chapter kickoff event and new member welcome" },
-  { name: "Fall Symposium 2024", type: "Symposium", month: "October", status: "Past", description: "Annual fall symposium — Antimicrobial Resistance" },
-  { name: "Career Panel 2024", type: "Workshop", month: "November", status: "Past", description: "Industry vs. academia: perspectives from microbiologists" }
-]
-```
+<div class="fc-legend mb-2">
+  <span class="fc-legend-dot" style="background:#003087;"></span> Symposium &nbsp;
+  <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
+  <span class="fc-legend-dot" style="background:#e8740c;"></span> Networking &nbsp;
+  <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop
+</div>
 
-```{ojs}
-//| echo: false
-viewof typeFilter = Inputs.checkbox(
-  ["Symposium", "Seminar", "Networking", "Workshop"],
-  {
-    label: "Event type",
-    value: ["Symposium", "Seminar", "Networking", "Workshop"]
-  }
-)
+<div id="event-calendar" style="max-width:900px; margin:0 auto;"></div>
 
-viewof statusFilter = Inputs.radio(
-  ["All", "Upcoming", "Past"],
-  { label: "Status", value: "All" }
-)
-```
-
-```{ojs}
-//| echo: false
-filteredEvents = events.filter(e =>
-  typeFilter.includes(e.type) &&
-  (statusFilter === "All" || e.status === statusFilter)
-)
-
-Inputs.table(filteredEvents, {
-  columns: ["name", "type", "month", "status", "description"],
-  header: {
-    name: "Event",
-    type: "Type",
-    month: "Month",
-    status: "Status",
-    description: "Description"
-  }
-})
-```
-
-```{ojs}
-//| echo: false
-upcomingCount = events.filter(e => e.status === "Upcoming").length
-pastCount = events.filter(e => e.status === "Past").length
-
-html`<div class="stats-grid">
-  <div class="stat-card">
-    <div class="stat-label">Upcoming Events</div>
-    <div class="stat-value">${upcomingCount}</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-label">Past Events</div>
-    <div class="stat-value">${pastCount}</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-label">Showing</div>
-    <div class="stat-value">${filteredEvents.length}</div>
-  </div>
-</div>`
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var calEl = document.getElementById('event-calendar');
+  var calendar = new FullCalendar.Calendar(calEl, {
+    initialView: 'dayGridMonth',
+    headerToolbar: {
+      left:   'prev,next today',
+      center: 'title',
+      right:  'dayGridMonth,listYear'
+    },
+    height: 'auto',
+    events: [
+      /* ── 2025 upcoming ── */
+      { title: 'Monthly Seminar — April',   start: '2025-04-17', color: '#0054a6',
+        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
+      { title: 'Spring Symposium 2025',     start: '2025-05-16', color: '#003087',
+        extendedProps: { location: 'Texas Medical Center, Houston, TX',
+                         description: 'Frontiers in Infectious Disease' } },
+      { title: 'Monthly Seminar — May',     start: '2025-05-15', color: '#0054a6',
+        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
+      { title: 'Networking Mixer',          start: '2025-06-06', color: '#e8740c',
+        extendedProps: { location: 'Houston, TX', description: 'Meet the Chapter — informal gathering' } },
+      { title: 'Monthly Seminar — June',    start: '2025-06-19', color: '#0054a6',
+        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
+      /* ── 2025 past ── */
+      { title: 'Monthly Seminar — March',   start: '2025-03-20', color: '#0054a6',
+        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
+      { title: 'Networking Mixer — March',  start: '2025-03-07', color: '#e8740c',
+        extendedProps: { location: 'Houston, TX', description: 'Informal meet-and-greet' } },
+      { title: 'Monthly Seminar — Feb',     start: '2025-02-20', color: '#0054a6',
+        extendedProps: { location: 'Rotating TMC venue', description: 'Research talk by TMC investigator' } },
+      { title: 'Grant Writing Workshop',    start: '2025-02-07', color: '#2e7d32',
+        extendedProps: { location: 'Texas Medical Center', description: 'NIH grant writing fundamentals' } },
+      /* ── 2024 ── */
+      { title: 'Career Panel 2024',         start: '2024-11-15', color: '#2e7d32',
+        extendedProps: { location: 'Texas Medical Center', description: 'Industry vs. academia: perspectives from microbiologists' } },
+      { title: 'Fall Symposium 2024',       start: '2024-10-18', color: '#003087',
+        extendedProps: { location: 'Texas Medical Center, Houston, TX', description: 'Antimicrobial Resistance' } },
+      { title: 'Fall Kickoff Mixer 2024',   start: '2024-09-06', color: '#e8740c',
+        extendedProps: { location: 'Houston, TX', description: 'Chapter kickoff and new member welcome' } }
+    ],
+    eventClick: function (info) {
+      var p   = info.event.extendedProps;
+      var msg = info.event.title
+              + (p.location    ? '\n📍 ' + p.location    : '')
+              + (p.description ? '\n📝 ' + p.description : '');
+      alert(msg);
+    },
+    eventMouseEnter: function (info) {
+      info.el.title = info.event.extendedProps.description || '';
+    }
+  });
+  calendar.render();
+});
+</script>
 ```
 
 ---

@@ -11,6 +11,8 @@ website:
         text: Home
       - href: events/index.qmd
         text: Events
+      - href: members/index.qmd
+        text: Members
       - href: resources/index.qmd
         text: Resources
       - href: blog/index.qmd
