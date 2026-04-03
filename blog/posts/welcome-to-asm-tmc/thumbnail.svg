@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e7a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a6ca8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)" rx="8"/>
+  <!-- Decorative circles -->
+  <circle cx="500" cy="80" r="120" fill="white" fill-opacity="0.05"/>
+  <circle cx="100" cy="340" r="90" fill="white" fill-opacity="0.05"/>
+  <!-- ASM-TMC text -->
+  <text x="300" y="170" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">ASM-TMC</text>
+  <text x="300" y="220" font-family="Arial, sans-serif" font-size="22" fill="white" fill-opacity="0.85" text-anchor="middle">Chapter Blog</text>
+  <!-- Divider -->
+  <rect x="200" y="245" width="200" height="2" fill="white" fill-opacity="0.4" rx="1"/>
+  <!-- Subtitle -->
+  <text x="300" y="285" font-family="Arial, sans-serif" font-size="15" fill="white" fill-opacity="0.7" text-anchor="middle">Texas Medical Center</text>
+</svg>

@@ -4,7 +4,7 @@ author: "ASM-TMC Chapter"
 date: "2025-04-01"
 categories: [news, announcements]
 description: "Introducing the ASM-TMC Chapter blog — your source for event recaps, scientific spotlights, career resources, and community updates from the Texas Medical Center."
-image: "thumbnail.jpg"
+image: "thumbnail.svg"
 ---
 
 ## Hello, ASM-TMC Community!

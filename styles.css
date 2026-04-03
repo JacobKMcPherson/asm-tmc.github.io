@@ -7,6 +7,7 @@
   --asm-blue-light:  #e8f0fb;   /* light blue tint */
   --asm-orange:      #e8740c;   /* accent orange */
   --asm-orange-light:#fff3e8;
+  --blog-thumb-size: 120px;     /* blog listing thumbnail size */
 }
 
 /* ── Navbar accent ───────────────────────────────────────────────────────── */
@@ -203,6 +204,15 @@ pre { border-radius: 6px; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Thumbnail styling for right-aligned listing images */
+.quarto-post.image-right .thumbnail img,
+.quarto-post .thumbnail-image {
+  object-fit: cover;
+  border-radius: 6px;
+  width: var(--blog-thumb-size);
+  height: var(--blog-thumb-size);
 }
 .social-feeds-grid {
   display: grid;
