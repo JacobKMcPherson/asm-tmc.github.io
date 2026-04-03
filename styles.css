@@ -368,9 +368,15 @@ pre { border-radius: 6px; }
 /* ── Member profile cards ────────────────────────────────────────────────── */
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin: 1.5rem 0;
+}
+
+@media (min-width: 900px) {
+  .members-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .member-card {
@@ -474,3 +480,13 @@ pre { border-radius: 6px; }
 .member-link-linkedin:hover { background: #0a66c2; color: #fff; }
 .member-link-x:hover        { background: #000;    color: #fff; }
 .member-link-bluesky:hover  { background: #0085ff; color: #fff; }
+.member-link-orcid          { background: #a6ce39; color: #fff; }
+.member-link-orcid:hover    { background: #8ab62d; color: #fff; }
+.orcid-icon-text            { font-size: 0.65rem; font-weight: 800; line-height: 1; }
+
+/* ── Wider main content area (≈50 % wider than Bootstrap default) ─────────── */
+@media (min-width: 1200px) {
+  .quarto-container {
+    max-width: 1710px !important;
+  }
+}

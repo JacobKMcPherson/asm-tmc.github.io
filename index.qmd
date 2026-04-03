@@ -54,7 +54,7 @@ Providing professional-development resources—grant writing, science communicat
 
 Listen to the latest episodes of ASM's *Editors in Conversation*, where journal editors discuss cutting-edge microbiology research:
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ---
 
@@ -116,21 +116,27 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
 
 ```{=html}
 <div class="social-feeds-grid">
-  <!-- X (Twitter) real-time timeline -->
+  <!-- X (Twitter) follow card -->
   <div class="social-feed-card">
     <div class="social-feed-header">
       <i class="bi bi-twitter-x"></i>
       <span>@asm_tmc on X</span>
     </div>
-    <div class="twitter-feed-wrapper">
-      <a class="twitter-timeline"
-         data-height="450"
-         data-theme="light"
-         data-chrome="noheader nofooter noborders transparent"
-         href="https://x.com/asm_tmc">
-        Posts by @asm_tmc
+    <div class="social-follow-wrapper">
+      <p class="social-feed-desc">
+        Follow us on X (formerly Twitter) for real-time updates, event announcements, and microbiology news from the Texas Medical Center community.
+      </p>
+      <a href="https://x.com/asm_tmc"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-dark">
+        <i class="bi bi-twitter-x me-2"></i>Follow @asm_tmc
       </a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <hr class="social-divider">
+      <p class="social-feed-note">
+        <i class="bi bi-bell me-1"></i>
+        Turn on notifications so you never miss an event announcement or research spotlight.
+      </p>
     </div>
   </div>
 
