@@ -24,7 +24,7 @@ toc: false
 
 <script>
 /* ── Single source of truth for all events ─────────────────────────────── */
-var ASM_EVENTS = [
+const ASM_EVENTS = [
   /* ── 2025 upcoming ── */
   { title: 'Monthly Seminar — April',   start: '2025-04-17', color: '#0054a6',
     icsFile: null,
@@ -80,9 +80,9 @@ var ASM_EVENTS = [
 ];
 
 /* ── Render FullCalendar ────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', function () {
-  var calEl = document.getElementById('event-calendar');
-  var calendar = new FullCalendar.Calendar(calEl, {
+document.addEventListener('DOMContentLoaded', () => {
+  const calEl    = document.getElementById('event-calendar');
+  const calendar = new FullCalendar.Calendar(calEl, {
     initialView: 'dayGridMonth',
     headerToolbar: {
       left:   'prev,next today',
@@ -91,39 +91,39 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     height: 'auto',
     events: ASM_EVENTS,
-    eventClick: function (info) {
-      var p   = info.event.extendedProps;
-      var msg = info.event.title
+    eventClick: (info) => {
+      const p   = info.event.extendedProps;
+      const msg = info.event.title
               + (p.location    ? '\n📍 ' + p.location    : '')
               + (p.description ? '\n📝 ' + p.description : '');
       alert(msg);
     },
-    eventMouseEnter: function (info) {
+    eventMouseEnter: (info) => {
       info.el.title = info.event.extendedProps.description || '';
     }
   });
   calendar.render();
 
   /* ── Render Upcoming Events list from the same data ─────────────────── */
-  var today = new Date();
+  const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  var upcoming = ASM_EVENTS
-    .filter(function (e) { return new Date(e.start) >= today; })
-    .sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
+  const upcoming = ASM_EVENTS
+    .filter(e => new Date(e.start) >= today)
+    .sort((a, b) => new Date(a.start) - new Date(b.start));
 
-  var container = document.getElementById('upcoming-events-list');
+  const container = document.getElementById('upcoming-events-list');
   if (upcoming.length === 0) {
     container.innerHTML = '<p class="text-muted">No upcoming events scheduled at this time. Check back soon!</p>';
     return;
   }
 
-  var html = '<h2>Upcoming Events</h2>';
-  upcoming.forEach(function (ev) {
-    var p    = ev.extendedProps;
-    var date = new Date(ev.start + 'T00:00:00');
-    var dateStr = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    var icsBtn = ev.icsFile
+  let html = '<h2>Upcoming Events</h2>';
+  upcoming.forEach(ev => {
+    const p       = ev.extendedProps;
+    const date    = new Date(ev.start + 'T00:00:00');
+    const dateStr = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const icsBtn  = ev.icsFile
       ? '<a href="' + ev.icsFile + '" download class="btn btn-sm btn-outline-primary ics-btn mt-2">'
         + '<i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)</a>'
       : '';
