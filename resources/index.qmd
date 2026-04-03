@@ -10,6 +10,7 @@ This page collects key resources for students, postdocs, and faculty in the micr
 ## Find a Resource
 
 ```{ojs}
+//| echo: false
 allResources = [
   // Journals
   { name: "mBio", category: "Journal", audience: "All", description: "ASM's flagship open-access journal covering all areas of microbiology.", url: "https://journals.asm.org/journal/mbio" },
@@ -43,6 +44,7 @@ allResources = [
 ```
 
 ```{ojs}
+//| echo: false
 viewof searchQuery = Inputs.text({
   label: "Search resources",
   placeholder: "e.g. journal, funding, career...",
@@ -64,6 +66,7 @@ viewof audienceFilter = Inputs.radio(
 ```
 
 ```{ojs}
+//| echo: false
 filteredResources = allResources.filter(r => {
   const q = searchQuery.toLowerCase();
   const matchesSearch = !q ||
@@ -71,12 +74,7 @@ filteredResources = allResources.filter(r => {
     r.description.toLowerCase().includes(q) ||
     r.category.toLowerCase().includes(q);
   const matchesCategory = categoryFilter.includes(r.category);
-  const matchesAudience =
-    audienceFilter === "All audiences" ||
-    r.audience === "All" ||
-    r.audience === audienceFilter.replace("s", ""); // "Students" → "Students", "Postdocs" → "Postdocs"
 
-  // Fix audience matching
   const aud = audienceFilter === "All audiences"
     ? true
     : (r.audience === "All" || r.audience === audienceFilter.replace(/s$/, ""));
@@ -90,6 +88,7 @@ html`<div style="margin-bottom: 0.5rem; color: var(--bs-secondary); font-size: 0
 ```
 
 ```{ojs}
+//| echo: false
 html`<div class="resource-list">
   ${filteredResources.map(r => `
     <div class="resource-card">
@@ -136,5 +135,3 @@ Selected high-impact reviews and resources for staying current in microbiology:
 ## Suggest a Resource
 Know a great resource that's missing from this list? Email us at [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com) and we'll add it.
 :::
-
-```

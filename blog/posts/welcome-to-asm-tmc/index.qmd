@@ -1,0 +1,40 @@
+---
+title: "Welcome to the ASM-TMC Chapter Blog"
+author: "ASM-TMC Chapter"
+date: "2025-04-01"
+categories: [news, announcements]
+description: "Introducing the ASM-TMC Chapter blog — your source for event recaps, scientific spotlights, career resources, and community updates from the Texas Medical Center."
+image: "thumbnail.svg"
+---
+
+## Hello, ASM-TMC Community!
+
+We are excited to launch the official **ASM-TMC Chapter blog** — a space dedicated to sharing news, ideas, and stories from our community of microbiologists across the Texas Medical Center.
+
+### What to Expect
+
+Here you will find:
+
+- **📅 Event recaps** — summaries, photos, and key takeaways from our seminars, symposia, and mixers
+- **🔬 Scientific spotlights** — highlights of research happening at TMC institutions
+- **💼 Career corner** — advice, resources, and perspectives on careers in the microbiological sciences
+- **📢 Chapter updates** — announcements about leadership, new initiatives, and membership news
+- **🌐 Community voices** — posts from student members, postdocs, and faculty across the TMC
+
+### Get Involved
+
+This blog is for and by the ASM-TMC community. We welcome contributions from members at all career stages:
+
+- **Have a research story to tell?** Share it with us.
+- **Attended a conference?** Write a recap.
+- **Found a career resource you love?** Recommend it here.
+
+To submit a blog post or suggest a topic, email us at [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com) with the subject line **"Blog Submission"**.
+
+### Stay Connected
+
+Follow us on [X (@asm_tmc)](https://x.com/asm_tmc) and [Instagram (@asm_tmc)](https://instagram.com/asm_tmc) for real-time updates, and subscribe to our mailing list to receive chapter announcements directly in your inbox.
+
+---
+
+*Welcome aboard — we are glad you are here.*

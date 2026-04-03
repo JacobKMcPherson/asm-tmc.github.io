@@ -10,7 +10,7 @@ toc: false
     <h1 class="hero-title">ASM-TMC Chapter</h1>
     <p class="hero-subtitle">Advancing the Microbiological Sciences in the Texas Medical Center</p>
     <a href="about.html" class="btn btn-primary btn-lg me-2">Learn About Us</a>
-    <a href="events.html" class="btn btn-outline-light btn-lg">Upcoming Events</a>
+    <a href="events/index.html" class="btn btn-outline-light btn-lg">Upcoming Events</a>
   </div>
 </div>
 ```
@@ -52,7 +52,7 @@ Providing professional-development resources—grant writing, science communicat
 
 ## Upcoming Events
 
-Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events.qmd) for the full calendar.
+Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar.
 
 ::: {.callout-note}
 ## Next Event
@@ -99,4 +99,56 @@ The [Texas Medical Center](https://www.tmc.edu/) is the largest medical complex 
 ## Connect With Us
 
 Have questions or want to get involved? Visit the [About page](about.qmd) to meet our leadership team and learn how to reach us.
+
+---
+
+## Social Media
+
+Follow us to stay up to date with ASM-TMC news, events, and announcements.
+
+```{=html}
+<div class="social-feeds-grid">
+  <!-- X (Twitter) real-time timeline -->
+  <div class="social-feed-card">
+    <div class="social-feed-header">
+      <i class="bi bi-twitter-x"></i>
+      <span>@asm_tmc on X</span>
+    </div>
+    <div class="twitter-feed-wrapper">
+      <a class="twitter-timeline"
+         data-height="450"
+         data-theme="light"
+         data-chrome="noheader nofooter noborders"
+         href="https://twitter.com/asm_tmc?ref_src=twsrc%5Etfw">
+        Tweets by asm_tmc
+      </a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+
+  <!-- Instagram follow card -->
+  <div class="social-feed-card">
+    <div class="social-feed-header">
+      <i class="bi bi-instagram"></i>
+      <span>@asm_tmc on Instagram</span>
+    </div>
+    <div class="instagram-feed-wrapper">
+      <p class="social-feed-desc">
+        Follow us on Instagram for behind-the-scenes photos, event highlights, and microbiology content from the Texas Medical Center community.
+      </p>
+      <a href="https://instagram.com/asm_tmc"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-instagram">
+        <i class="bi bi-instagram me-2"></i>Follow @asm_tmc
+      </a>
+      <hr class="social-divider">
+      <p class="social-feed-note">
+        <i class="bi bi-bell me-1"></i>
+        Turn on post notifications so you never miss an event announcement or research spotlight.
+      </p>
+    </div>
+  </div>
+</div>
+```
 

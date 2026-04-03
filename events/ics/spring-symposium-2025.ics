@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ASM-TMC Chapter//ASM-TMC Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ASM-TMC Spring Symposium 2025
+X-WR-CALDESC:Spring Symposium 2025 — Frontiers in Infectious Disease
+BEGIN:VEVENT
+UID:spring-symposium-2025@asm-tmc.github.io
+DTSTART:20250515T090000Z
+DTEND:20250515T170000Z
+DTSTAMP:20250101T000000Z
+SUMMARY:Spring Symposium 2025 — Frontiers in Infectious Disease
+DESCRIPTION:Annual spring symposium featuring invited speakers at the cutting edge of infectious-disease research. Sessions on antimicrobial resistance\, host–pathogen interactions\, and emerging pathogens.\n\nNote: Date is tentative (TBD). Check https://asm-tmc.github.io/events/ for confirmed date and registration details.
+LOCATION:Texas Medical Center\, Houston\, TX
+URL:https://asm-tmc.github.io/events/
+STATUS:TENTATIVE
+END:VEVENT
+END:VCALENDAR

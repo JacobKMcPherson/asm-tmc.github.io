@@ -14,7 +14,11 @@ The ASM-TMC Chapter hosts a variety of scientific and professional-development e
 🗓 **Date:** TBD  
 📍 **Location:** Texas Medical Center, Houston, TX  
 📝 **Description:** Our annual spring symposium will feature invited speakers working at the cutting edge of infectious-disease research, including sessions on antimicrobial resistance, host–pathogen interactions, and emerging pathogens.  
-Registration details will be announced via our mailing list. [Contact us](about.qmd) to be added.
+Registration details will be announced via our mailing list. [Contact us](../about.qmd) to be added.
+
+<a href="ics/spring-symposium-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
+  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
+</a>
 :::
 
 ::: {.callout-note}
@@ -22,7 +26,11 @@ Registration details will be announced via our mailing list. [Contact us](about.
 🗓 **Frequency:** Monthly (dates TBD)  
 📍 **Location:** Rotating TMC institutions  
 📝 **Description:** Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking.  
-[Subscribe to our mailing list](about.qmd) to receive location and speaker announcements.
+[Subscribe to our mailing list](../about.qmd) to receive location and speaker announcements.
+
+<a href="ics/monthly-seminar-series.ics" download class="btn btn-sm btn-outline-primary ics-btn">
+  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
+</a>
 :::
 
 ::: {.callout-note}
@@ -30,6 +38,10 @@ Registration details will be announced via our mailing list. [Contact us](about.
 🗓 **Date:** TBD  
 📍 **Location:** Houston, TX  
 📝 **Description:** An informal gathering for current members, new members, and anyone interested in learning more about the chapter. Light refreshments provided.
+
+<a href="ics/networking-mixer-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
+  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
+</a>
 :::
 
 ---
@@ -39,6 +51,7 @@ Registration details will be announced via our mailing list. [Contact us](about.
 Use the interactive browser below to explore our events by type and month.
 
 ```{ojs}
+//| echo: false
 events = [
   { name: "Spring Symposium 2025", type: "Symposium", month: "May", status: "Upcoming", description: "Annual symposium — Frontiers in Infectious Disease" },
   { name: "Monthly Seminar — April", type: "Seminar", month: "April", status: "Upcoming", description: "Speaker TBA, rotating TMC venue" },
@@ -53,6 +66,7 @@ events = [
 ```
 
 ```{ojs}
+//| echo: false
 viewof typeFilter = Inputs.checkbox(
   ["Symposium", "Seminar", "Networking", "Workshop"],
   {
@@ -68,6 +82,7 @@ viewof statusFilter = Inputs.radio(
 ```
 
 ```{ojs}
+//| echo: false
 filteredEvents = events.filter(e =>
   typeFilter.includes(e.type) &&
   (statusFilter === "All" || e.status === statusFilter)
@@ -86,7 +101,7 @@ Inputs.table(filteredEvents, {
 ```
 
 ```{ojs}
-// Summary counts
+//| echo: false
 upcomingCount = events.filter(e => e.status === "Upcoming").length
 pastCount = events.filter(e => e.status === "Past").length
 
@@ -110,11 +125,9 @@ html`<div class="stats-grid">
 
 ## Propose an Event
 
-Members are encouraged to propose seminars, workshops, or social events. If you would like to present your research, suggest a speaker, or propose an event format, reach out to our Events Coordinator via the [About page](about.qmd).
+Members are encouraged to propose seminars, workshops, or social events. If you would like to present your research, suggest a speaker, or propose an event format, reach out to our Events Coordinator via the [About page](../about.qmd).
 
 ::: {.callout-tip}
 ## Stay Informed
 Sign up for our mailing list to receive announcements for all upcoming ASM-TMC events. Send an email with the subject **"Subscribe"** to [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com).
 :::
-
-```
