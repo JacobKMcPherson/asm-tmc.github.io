@@ -1,52 +1,9 @@
 ---
-title: "Events"
-description: "Seminars, symposia, networking events, and workshops hosted by the ASM-TMC Chapter"
+pagetitle: "Events | ASM-TMC Chapter"
+toc: false
 ---
 
-The ASM-TMC Chapter hosts a variety of scientific and professional-development events throughout the year. Browse upcoming events below and check back often for new announcements.
-
----
-
-## Upcoming Events
-
-::: {.callout-note}
-## Spring Symposium 2025 — *Frontiers in Infectious Disease*
-🗓 **Date:** May 16, 2025  
-📍 **Location:** Texas Medical Center, Houston, TX  
-📝 **Description:** Our annual spring symposium will feature invited speakers working at the cutting edge of infectious-disease research, including sessions on antimicrobial resistance, host–pathogen interactions, and emerging pathogens.  
-Registration details will be announced via our mailing list. [Contact us](../about.qmd) to be added.
-
-<a href="ics/spring-symposium-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
-  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
-</a>
-:::
-
-::: {.callout-note}
-## Seminar Series — *Microbiology at the TMC*
-🗓 **Frequency:** Monthly (third Thursday)  
-📍 **Location:** Rotating TMC institutions  
-📝 **Description:** Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking.  
-[Subscribe to our mailing list](../about.qmd) to receive location and speaker announcements.
-
-<a href="ics/monthly-seminar-series.ics" download class="btn btn-sm btn-outline-primary ics-btn">
-  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
-</a>
-:::
-
-::: {.callout-note}
-## Networking Mixer — *Meet the Chapter*
-🗓 **Date:** June 6, 2025  
-📍 **Location:** Houston, TX  
-📝 **Description:** An informal gathering for current members, new members, and anyone interested in learning more about the chapter. Light refreshments provided.
-
-<a href="ics/networking-mixer-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
-  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
-</a>
-:::
-
----
-
-## Event Calendar
+## Calendar
 
 ```{=html}
 <!-- FullCalendar CDN -->
@@ -118,6 +75,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 ```
+
+---
+
+## Upcoming Events
+
+::: {.callout-note}
+## Spring Symposium 2025 — *Frontiers in Infectious Disease*
+🗓 **Date:** May 16, 2025  
+📍 **Location:** Texas Medical Center, Houston, TX  
+📝 **Description:** Our annual spring symposium will feature invited speakers working at the cutting edge of infectious-disease research, including sessions on antimicrobial resistance, host–pathogen interactions, and emerging pathogens.  
+Registration details will be announced via our mailing list. [Contact us](../about.qmd) to be added.
+
+<a href="ics/spring-symposium-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
+  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
+</a>
+:::
+
+::: {.callout-note}
+## Seminar Series — *Microbiology at the TMC*
+🗓 **Frequency:** Monthly (third Thursday)  
+📍 **Location:** Rotating TMC institutions  
+📝 **Description:** Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking.  
+[Subscribe to our mailing list](../about.qmd) to receive location and speaker announcements.
+
+<a href="ics/monthly-seminar-series.ics" download class="btn btn-sm btn-outline-primary ics-btn">
+  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
+</a>
+:::
+
+::: {.callout-note}
+## Networking Mixer — *Meet the Chapter*
+🗓 **Date:** June 6, 2025  
+📍 **Location:** Houston, TX  
+📝 **Description:** An informal gathering for current members, new members, and anyone interested in learning more about the chapter. Light refreshments provided.
+
+<a href="ics/networking-mixer-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
+  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
+</a>
+:::
 
 ---
 
