@@ -1,0 +1,140 @@
+---
+title: "Resources"
+description: "Useful resources for ASM-TMC members — journals, funding, career tools, and more"
+---
+
+This page collects key resources for students, postdocs, and faculty in the microbiological sciences. Use the search tool below to quickly find what you need.
+
+---
+
+## Find a Resource
+
+```{ojs}
+allResources = [
+  // Journals
+  { name: "mBio", category: "Journal", audience: "All", description: "ASM's flagship open-access journal covering all areas of microbiology.", url: "https://journals.asm.org/journal/mbio" },
+  { name: "Infection and Immunity", category: "Journal", audience: "All", description: "ASM journal covering host–pathogen interactions and mechanisms of infection.", url: "https://journals.asm.org/journal/iai" },
+  { name: "Journal of Bacteriology", category: "Journal", audience: "All", description: "ASM journal focused on the molecular and cellular biology of bacteria.", url: "https://journals.asm.org/journal/jb" },
+  { name: "Antimicrobial Agents and Chemotherapy", category: "Journal", audience: "All", description: "ASM journal covering antimicrobial resistance, drug development, and treatment.", url: "https://journals.asm.org/journal/aac" },
+  { name: "Journal of Virology", category: "Journal", audience: "All", description: "ASM journal covering all aspects of virology.", url: "https://journals.asm.org/journal/jvi" },
+  { name: "Microbiology Spectrum", category: "Journal", audience: "All", description: "ASM open-access journal with review articles across all microbiology disciplines.", url: "https://journals.asm.org/journal/spectrum" },
+  // Funding
+  { name: "NIH Reporter", category: "Funding", audience: "All", description: "Search active and past NIH-funded research projects.", url: "https://reporter.nih.gov/" },
+  { name: "ASM Undergraduate Research Fellowship", category: "Funding", audience: "Students", description: "ASM fellowship supporting undergraduate research in microbiology.", url: "https://asm.org/Fellowships/ASM-Undergraduate-Research-Fellowship" },
+  { name: "ASM Merck Postdoctoral Fellowship", category: "Funding", audience: "Postdocs", description: "Postdoctoral fellowship in medically relevant microbiology.", url: "https://asm.org/Fellowships/ASM-Merck-Postdoctoral-Fellowship" },
+  { name: "NSF Graduate Research Fellowship (GRFP)", category: "Funding", audience: "Students", description: "NSF fellowship for early-career graduate students in STEM.", url: "https://www.nsfgrfp.org/" },
+  { name: "NIH F31 / F32", category: "Funding", audience: "Students", description: "NIH predoctoral (F31) and postdoctoral (F32) individual fellowships.", url: "https://researchtraining.nih.gov/programs/fellowships" },
+  // Databases & Tools
+  { name: "PubMed", category: "Database", audience: "All", description: "NCBI database of biomedical literature with free full-text access to many articles.", url: "https://pubmed.ncbi.nlm.nih.gov/" },
+  { name: "NCBI Nucleotide / Protein", category: "Database", audience: "All", description: "Search nucleotide and protein sequences at NCBI.", url: "https://www.ncbi.nlm.nih.gov/" },
+  { name: "BioProject / SRA", category: "Database", audience: "All", description: "Access raw sequencing data deposited in NCBI's Sequence Read Archive.", url: "https://www.ncbi.nlm.nih.gov/sra" },
+  { name: "UniProt", category: "Database", audience: "All", description: "Comprehensive protein sequence and functional information resource.", url: "https://www.uniprot.org/" },
+  { name: "PATRIC", category: "Database", audience: "All", description: "Bacterial Bioinformatics Resource Center — genomics, transcriptomics, and more.", url: "https://www.patricbrc.org/" },
+  // Career
+  { name: "ASM Career Center", category: "Career", audience: "All", description: "Job board and career resources for microbiologists.", url: "https://careers.asm.org/" },
+  { name: "myIDP (Individual Development Plan)", category: "Career", audience: "Students", description: "Science careers IDP tool to help graduate students and postdocs plan their careers.", url: "https://myidp.sciencecareers.org/" },
+  { name: "AAAS Science Careers", category: "Career", audience: "All", description: "Career resources and job listings for scientists from Science/AAAS.", url: "https://www.sciencecareers.org/" },
+  { name: "Cheeky Scientist", category: "Career", audience: "Postdocs", description: "Industry transition resources and training for PhDs.", url: "https://cheekyscientist.com/" },
+  // TMC / Local
+  { name: "Texas Medical Center", category: "Local", audience: "All", description: "Official TMC website with information on institutions, events, and innovation.", url: "https://www.tmc.edu/" },
+  { name: "BCM Graduate School", category: "Local", audience: "Students", description: "Baylor College of Medicine graduate programs in biomedical sciences.", url: "https://www.bcm.edu/education/graduate-school-of-biomedical-sciences" },
+  { name: "UTHealth Graduate School", category: "Local", audience: "Students", description: "UTHealth Houston Graduate School of Biomedical Sciences programs.", url: "https://gsbs.uth.edu/" }
+]
+```
+
+```{ojs}
+viewof searchQuery = Inputs.text({
+  label: "Search resources",
+  placeholder: "e.g. journal, funding, career...",
+  value: ""
+})
+
+viewof categoryFilter = Inputs.checkbox(
+  ["Journal", "Funding", "Database", "Career", "Local"],
+  {
+    label: "Category",
+    value: ["Journal", "Funding", "Database", "Career", "Local"]
+  }
+)
+
+viewof audienceFilter = Inputs.radio(
+  ["All audiences", "Students", "Postdocs"],
+  { label: "Audience", value: "All audiences" }
+)
+```
+
+```{ojs}
+filteredResources = allResources.filter(r => {
+  const q = searchQuery.toLowerCase();
+  const matchesSearch = !q ||
+    r.name.toLowerCase().includes(q) ||
+    r.description.toLowerCase().includes(q) ||
+    r.category.toLowerCase().includes(q);
+  const matchesCategory = categoryFilter.includes(r.category);
+  const matchesAudience =
+    audienceFilter === "All audiences" ||
+    r.audience === "All" ||
+    r.audience === audienceFilter.replace("s", ""); // "Students" → "Students", "Postdocs" → "Postdocs"
+
+  // Fix audience matching
+  const aud = audienceFilter === "All audiences"
+    ? true
+    : (r.audience === "All" || r.audience === audienceFilter.replace(/s$/, ""));
+
+  return matchesSearch && matchesCategory && aud;
+})
+
+html`<div style="margin-bottom: 0.5rem; color: var(--bs-secondary); font-size: 0.9rem;">
+  Showing <strong>${filteredResources.length}</strong> of ${allResources.length} resources
+</div>`
+```
+
+```{ojs}
+html`<div class="resource-list">
+  ${filteredResources.map(r => `
+    <div class="resource-card">
+      <div class="resource-header">
+        <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="resource-name">${r.name}</a>
+        <span class="resource-badge resource-badge-${r.category.toLowerCase()}">${r.category}</span>
+        ${r.audience !== "All" ? `<span class="resource-badge resource-badge-audience">${r.audience}</span>` : ""}
+      </div>
+      <p class="resource-desc">${r.description}</p>
+    </div>
+  `).join("")}
+</div>`
+```
+
+---
+
+## ASM Membership Benefits
+
+As a member of the national ASM, you gain access to:
+
+| Benefit | Details |
+|---|---|
+| **Journal access** | Discounted or free access to all 14 ASM journals |
+| **ASM Microbe** | Discounted registration for the annual meeting |
+| **Career Center** | Full access to job postings and career resources |
+| **Grants & Awards** | Eligibility for ASM travel grants, fellowships, and awards |
+| **ASM Academy** | Online professional-development courses and webinars |
+| **Advocacy** | ASM advocates for science funding and policy on your behalf |
+
+Join or renew at [asm.org/membership](https://asm.org/membership).
+
+---
+
+## Suggested Reading
+
+Selected high-impact reviews and resources for staying current in microbiology:
+
+- [*Nature Reviews Microbiology*](https://www.nature.com/nrmicro/) — leading review journal covering all microbiology subfields
+- [*Cell Host & Microbe*](https://www.cell.com/cell-host-microbe/home) — host–microbe interactions, microbiome, infectious disease
+- [*PLOS Pathogens*](https://journals.plos.org/plospathogens/) — open-access research on pathogens
+- [ASM Podcasts](https://asm.org/Podcasts) — *This Week in Microbiology*, *This Week in Virology*, and more
+
+::: {.callout-tip}
+## Suggest a Resource
+Know a great resource that's missing from this list? Email us at [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com) and we'll add it.
+:::
+
+```

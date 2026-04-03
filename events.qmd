@@ -1,0 +1,120 @@
+---
+title: "Events"
+description: "Seminars, symposia, networking events, and workshops hosted by the ASM-TMC Chapter"
+---
+
+The ASM-TMC Chapter hosts a variety of scientific and professional-development events throughout the year. Browse upcoming events below and check back often for new announcements.
+
+---
+
+## Upcoming Events
+
+::: {.callout-note}
+## Spring Symposium 2025 — *Frontiers in Infectious Disease*
+🗓 **Date:** TBD  
+📍 **Location:** Texas Medical Center, Houston, TX  
+📝 **Description:** Our annual spring symposium will feature invited speakers working at the cutting edge of infectious-disease research, including sessions on antimicrobial resistance, host–pathogen interactions, and emerging pathogens.  
+Registration details will be announced via our mailing list. [Contact us](about.qmd) to be added.
+:::
+
+::: {.callout-note}
+## Seminar Series — *Microbiology at the TMC*
+🗓 **Frequency:** Monthly (dates TBD)  
+📍 **Location:** Rotating TMC institutions  
+📝 **Description:** Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking.  
+[Subscribe to our mailing list](about.qmd) to receive location and speaker announcements.
+:::
+
+::: {.callout-note}
+## Networking Mixer — *Meet the Chapter*
+🗓 **Date:** TBD  
+📍 **Location:** Houston, TX  
+📝 **Description:** An informal gathering for current members, new members, and anyone interested in learning more about the chapter. Light refreshments provided.
+:::
+
+---
+
+## Event Calendar
+
+Use the interactive browser below to explore our events by type and month.
+
+```{ojs}
+events = [
+  { name: "Spring Symposium 2025", type: "Symposium", month: "May", status: "Upcoming", description: "Annual symposium — Frontiers in Infectious Disease" },
+  { name: "Monthly Seminar — April", type: "Seminar", month: "April", status: "Upcoming", description: "Speaker TBA, rotating TMC venue" },
+  { name: "Networking Mixer", type: "Networking", month: "March", status: "Upcoming", description: "Informal meet-and-greet for new and current members" },
+  { name: "Monthly Seminar — March", type: "Seminar", month: "March", status: "Upcoming", description: "Speaker TBA, rotating TMC venue" },
+  { name: "Grant Writing Workshop", type: "Workshop", month: "February", status: "Past", description: "Professional development: NIH grant writing fundamentals" },
+  { name: "Monthly Seminar — February", type: "Seminar", month: "February", status: "Past", description: "Research talk by TMC investigator" },
+  { name: "Fall Kickoff Mixer 2024", type: "Networking", month: "September", status: "Past", description: "Chapter kickoff event and new member welcome" },
+  { name: "Fall Symposium 2024", type: "Symposium", month: "October", status: "Past", description: "Annual fall symposium — Antimicrobial Resistance" },
+  { name: "Career Panel 2024", type: "Workshop", month: "November", status: "Past", description: "Industry vs. academia: perspectives from microbiologists" }
+]
+```
+
+```{ojs}
+viewof typeFilter = Inputs.checkbox(
+  ["Symposium", "Seminar", "Networking", "Workshop"],
+  {
+    label: "Event type",
+    value: ["Symposium", "Seminar", "Networking", "Workshop"]
+  }
+)
+
+viewof statusFilter = Inputs.radio(
+  ["All", "Upcoming", "Past"],
+  { label: "Status", value: "All" }
+)
+```
+
+```{ojs}
+filteredEvents = events.filter(e =>
+  typeFilter.includes(e.type) &&
+  (statusFilter === "All" || e.status === statusFilter)
+)
+
+Inputs.table(filteredEvents, {
+  columns: ["name", "type", "month", "status", "description"],
+  header: {
+    name: "Event",
+    type: "Type",
+    month: "Month",
+    status: "Status",
+    description: "Description"
+  }
+})
+```
+
+```{ojs}
+// Summary counts
+upcomingCount = events.filter(e => e.status === "Upcoming").length
+pastCount = events.filter(e => e.status === "Past").length
+
+html`<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-label">Upcoming Events</div>
+    <div class="stat-value">${upcomingCount}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Past Events</div>
+    <div class="stat-value">${pastCount}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Showing</div>
+    <div class="stat-value">${filteredEvents.length}</div>
+  </div>
+</div>`
+```
+
+---
+
+## Propose an Event
+
+Members are encouraged to propose seminars, workshops, or social events. If you would like to present your research, suggest a speaker, or propose an event format, reach out to our Events Coordinator via the [About page](about.qmd).
+
+::: {.callout-tip}
+## Stay Informed
+Sign up for our mailing list to receive announcements for all upcoming ASM-TMC events. Send an email with the subject **"Subscribe"** to [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com).
+:::
+
+```
