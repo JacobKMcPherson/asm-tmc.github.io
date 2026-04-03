@@ -26,11 +26,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: host–pathogen interactions in <em>Staphylococcus aureus</em> infections.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -58,11 +58,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: antimicrobial resistance mechanisms in Gram-negative bacteria.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -90,11 +90,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: microbiome–immunotherapy interactions in oncology patients.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -122,11 +122,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: translational virology and antiviral drug development.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -154,11 +154,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: environmental microbiology and microbial ecology of urban waterways.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -186,11 +186,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: CRISPR-based diagnostics for rapid infectious disease detection.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -228,11 +228,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: bacterial biofilm formation and antibiotic tolerance.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -260,11 +260,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: viral immunology and vaccine development.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
@@ -292,11 +292,11 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: fungal pathogenesis and innate immune evasion.
       </p>
       <div class="member-links">
-        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
-          <i class="bi bi-mortarboard-fill"></i>
-        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
+        </a>
+        <a href="#" class="member-link" title="Google Scholar" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
         </a>
         <a href="#" class="member-link member-link-linkedin" title="LinkedIn" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
