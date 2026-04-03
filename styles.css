@@ -494,7 +494,7 @@ pre { border-radius: 6px; }
     grid-template-columns:
       [screen-start] 10vw
       [screen-start-inset page-start page-start-inset] 10vw
-      [body-start-outset body-start body-content-start] minmax(0, 60vw)
+      [body-start-outset body-start body-content-start] 60vw
       [body-content-end] 10vw
       [body-end body-end-outset] 10vw
       [page-end-inset page-end screen-end-inset screen-end] !important;
