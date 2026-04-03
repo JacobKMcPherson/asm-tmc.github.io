@@ -482,6 +482,7 @@ pre { border-radius: 6px; }
 .member-link-bluesky:hover  { background: #0085ff; color: #fff; }
 .member-link-orcid          { background: #a6ce39; color: #fff; }
 .member-link-orcid:hover    { background: #8ab62d; color: #fff; }
+.member-link-email:hover    { background: var(--asm-orange); color: #fff; }
 .orcid-icon-text            { font-size: 0.65rem; font-weight: 800; line-height: 1; }
 
 /* ── Main content area — 60 % of screen width, always centred ────────────── */

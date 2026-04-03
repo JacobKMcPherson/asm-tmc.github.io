@@ -9,7 +9,7 @@ toc: false
   <div class="hero-content">
     <h1 class="hero-title">ASM-TMC Chapter</h1>
     <p class="hero-subtitle">Advancing the Microbiological Sciences in the Texas Medical Center</p>
-    <a href="about.html" class="btn btn-primary btn-lg me-2">Learn About Us</a>
+    <a href="about/index.html" class="btn btn-primary btn-lg me-2">Learn About Us</a>
     <a href="events/index.html" class="btn btn-outline-light btn-lg">Upcoming Events</a>
   </div>
 </div>
@@ -128,7 +128,7 @@ The [Texas Medical Center](https://www.tmc.edu/) is the largest medical complex 
 
 ## Connect With Us
 
-Have questions or want to get involved? Visit the [About page](about.qmd) to meet our leadership team and learn how to reach us.
+Have questions or want to get involved? Visit the [About page](about/index.qmd) to meet our leadership team and learn how to reach us.
 
 ---
 

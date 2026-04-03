@@ -19,7 +19,67 @@ toc: false
 
 <div id="event-calendar" style="max-width:900px; margin:0 auto;"></div>
 
+<!-- Upcoming Events listing rendered from the same data source -->
+<div id="upcoming-events-list" style="margin-top:2rem;"></div>
+
 <script>
+/* ── Single source of truth for all events ─────────────────────────────── */
+var ASM_EVENTS = [
+  /* ── 2025 upcoming ── */
+  { title: 'Monthly Seminar — April',   start: '2025-04-17', color: '#0054a6',
+    icsFile: null,
+    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
+                     type: 'seminar' } },
+  { title: 'Spring Symposium 2025',     start: '2025-05-16', color: '#003087',
+    icsFile: 'ics/spring-symposium-2025.ics',
+    extendedProps: { location: 'Texas Medical Center, Houston, TX',
+                     description: 'Frontiers in Infectious Disease',
+                     type: 'symposium' } },
+  { title: 'Monthly Seminar — May',     start: '2025-05-15', color: '#0054a6',
+    icsFile: 'ics/monthly-seminar-series.ics',
+    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
+                     type: 'seminar' } },
+  { title: 'Networking Mixer',          start: '2025-06-06', color: '#e8740c',
+    icsFile: 'ics/networking-mixer-2025.ics',
+    extendedProps: { location: 'Houston, TX', description: 'Meet the Chapter — informal gathering',
+                     type: 'networking' } },
+  { title: 'Monthly Seminar — June',    start: '2025-06-19', color: '#0054a6',
+    icsFile: 'ics/monthly-seminar-series.ics',
+    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
+                     type: 'seminar' } },
+  /* ── 2025 past ── */
+  { title: 'Monthly Seminar — March',   start: '2025-03-20', color: '#0054a6',
+    icsFile: null,
+    extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA',
+                     type: 'seminar' } },
+  { title: 'Networking Mixer — March',  start: '2025-03-07', color: '#e8740c',
+    icsFile: null,
+    extendedProps: { location: 'Houston, TX', description: 'Informal meet-and-greet',
+                     type: 'networking' } },
+  { title: 'Monthly Seminar — Feb',     start: '2025-02-20', color: '#0054a6',
+    icsFile: null,
+    extendedProps: { location: 'Rotating TMC venue', description: 'Research talk by TMC investigator',
+                     type: 'seminar' } },
+  { title: 'Grant Writing Workshop',    start: '2025-02-07', color: '#2e7d32',
+    icsFile: null,
+    extendedProps: { location: 'Texas Medical Center', description: 'NIH grant writing fundamentals',
+                     type: 'workshop' } },
+  /* ── 2024 ── */
+  { title: 'Career Panel 2024',         start: '2024-11-15', color: '#2e7d32',
+    icsFile: null,
+    extendedProps: { location: 'Texas Medical Center', description: 'Industry vs. academia: perspectives from microbiologists',
+                     type: 'workshop' } },
+  { title: 'Fall Symposium 2024',       start: '2024-10-18', color: '#003087',
+    icsFile: null,
+    extendedProps: { location: 'Texas Medical Center, Houston, TX', description: 'Antimicrobial Resistance',
+                     type: 'symposium' } },
+  { title: 'Fall Kickoff Mixer 2024',   start: '2024-09-06', color: '#e8740c',
+    icsFile: null,
+    extendedProps: { location: 'Houston, TX', description: 'Chapter kickoff and new member welcome',
+                     type: 'networking' } }
+];
+
+/* ── Render FullCalendar ────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function () {
   var calEl = document.getElementById('event-calendar');
   var calendar = new FullCalendar.Calendar(calEl, {
@@ -30,36 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       right:  'dayGridMonth,listYear'
     },
     height: 'auto',
-    events: [
-      /* ── 2025 upcoming ── */
-      { title: 'Monthly Seminar — April',   start: '2025-04-17', color: '#0054a6',
-        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
-      { title: 'Spring Symposium 2025',     start: '2025-05-16', color: '#003087',
-        extendedProps: { location: 'Texas Medical Center, Houston, TX',
-                         description: 'Frontiers in Infectious Disease' } },
-      { title: 'Monthly Seminar — May',     start: '2025-05-15', color: '#0054a6',
-        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
-      { title: 'Networking Mixer',          start: '2025-06-06', color: '#e8740c',
-        extendedProps: { location: 'Houston, TX', description: 'Meet the Chapter — informal gathering' } },
-      { title: 'Monthly Seminar — June',    start: '2025-06-19', color: '#0054a6',
-        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
-      /* ── 2025 past ── */
-      { title: 'Monthly Seminar — March',   start: '2025-03-20', color: '#0054a6',
-        extendedProps: { location: 'Rotating TMC venue', description: 'Speaker TBA' } },
-      { title: 'Networking Mixer — March',  start: '2025-03-07', color: '#e8740c',
-        extendedProps: { location: 'Houston, TX', description: 'Informal meet-and-greet' } },
-      { title: 'Monthly Seminar — Feb',     start: '2025-02-20', color: '#0054a6',
-        extendedProps: { location: 'Rotating TMC venue', description: 'Research talk by TMC investigator' } },
-      { title: 'Grant Writing Workshop',    start: '2025-02-07', color: '#2e7d32',
-        extendedProps: { location: 'Texas Medical Center', description: 'NIH grant writing fundamentals' } },
-      /* ── 2024 ── */
-      { title: 'Career Panel 2024',         start: '2024-11-15', color: '#2e7d32',
-        extendedProps: { location: 'Texas Medical Center', description: 'Industry vs. academia: perspectives from microbiologists' } },
-      { title: 'Fall Symposium 2024',       start: '2024-10-18', color: '#003087',
-        extendedProps: { location: 'Texas Medical Center, Houston, TX', description: 'Antimicrobial Resistance' } },
-      { title: 'Fall Kickoff Mixer 2024',   start: '2024-09-06', color: '#e8740c',
-        extendedProps: { location: 'Houston, TX', description: 'Chapter kickoff and new member welcome' } }
-    ],
+    events: ASM_EVENTS,
     eventClick: function (info) {
       var p   = info.event.extendedProps;
       var msg = info.event.title
@@ -72,54 +103,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   calendar.render();
+
+  /* ── Render Upcoming Events list from the same data ─────────────────── */
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  var upcoming = ASM_EVENTS
+    .filter(function (e) { return new Date(e.start) >= today; })
+    .sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
+
+  var container = document.getElementById('upcoming-events-list');
+  if (upcoming.length === 0) {
+    container.innerHTML = '<p class="text-muted">No upcoming events scheduled at this time. Check back soon!</p>';
+    return;
+  }
+
+  var html = '<h2>Upcoming Events</h2>';
+  upcoming.forEach(function (ev) {
+    var p    = ev.extendedProps;
+    var date = new Date(ev.start + 'T00:00:00');
+    var dateStr = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    var icsBtn = ev.icsFile
+      ? '<a href="' + ev.icsFile + '" download class="btn btn-sm btn-outline-primary ics-btn mt-2">'
+        + '<i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)</a>'
+      : '';
+    html += '<div class="callout callout-style-default callout-note" style="margin-bottom:1rem;">'
+          + '<div class="callout-header"><strong>' + ev.title + '</strong></div>'
+          + '<div class="callout-body">'
+          + '<p>🗓 <strong>Date:</strong> ' + dateStr + '<br>'
+          + '📍 <strong>Location:</strong> ' + (p.location || 'TBD') + '<br>'
+          + '📝 <strong>Description:</strong> ' + (p.description || '') + '</p>'
+          + icsBtn
+          + '</div></div>';
+  });
+  container.innerHTML = html;
 });
 </script>
 ```
 
 ---
 
-## Upcoming Events
-
-::: {.callout-note}
-## Spring Symposium 2025 — *Frontiers in Infectious Disease*
-🗓 **Date:** May 16, 2025  
-📍 **Location:** Texas Medical Center, Houston, TX  
-📝 **Description:** Our annual spring symposium will feature invited speakers working at the cutting edge of infectious-disease research, including sessions on antimicrobial resistance, host–pathogen interactions, and emerging pathogens.  
-Registration details will be announced via our mailing list. [Contact us](../about.qmd) to be added.
-
-<a href="ics/spring-symposium-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
-  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
-</a>
-:::
-
-::: {.callout-note}
-## Seminar Series — *Microbiology at the TMC*
-🗓 **Frequency:** Monthly (third Thursday)  
-📍 **Location:** Rotating TMC institutions  
-📝 **Description:** Monthly seminars featuring researchers from TMC institutions. Each seminar includes a 45-minute talk followed by a Q&A and informal networking.  
-[Subscribe to our mailing list](../about.qmd) to receive location and speaker announcements.
-
-<a href="ics/monthly-seminar-series.ics" download class="btn btn-sm btn-outline-primary ics-btn">
-  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
-</a>
-:::
-
-::: {.callout-note}
-## Networking Mixer — *Meet the Chapter*
-🗓 **Date:** June 6, 2025  
-📍 **Location:** Houston, TX  
-📝 **Description:** An informal gathering for current members, new members, and anyone interested in learning more about the chapter. Light refreshments provided.
-
-<a href="ics/networking-mixer-2025.ics" download class="btn btn-sm btn-outline-primary ics-btn">
-  <i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)
-</a>
-:::
-
----
-
 ## Propose an Event
 
-Members are encouraged to propose seminars, workshops, or social events. If you would like to present your research, suggest a speaker, or propose an event format, reach out to our Events Coordinator via the [About page](../about.qmd).
+Members are encouraged to propose seminars, workshops, or social events. If you would like to present your research, suggest a speaker, or propose an event format, reach out to our Events Coordinator via the [About page](../about/index.qmd).
 
 ::: {.callout-tip}
 ## Stay Informed
