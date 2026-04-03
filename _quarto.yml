@@ -17,7 +17,7 @@ website:
         text: Resources
       - href: blog/index.qmd
         text: Blog
-      - href: about.qmd
+      - href: about/index.qmd
         text: About
     right:
       - icon: twitter-x

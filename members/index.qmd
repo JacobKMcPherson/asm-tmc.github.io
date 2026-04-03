@@ -26,6 +26,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: host–pathogen interactions in <em>Staphylococcus aureus</em> infections.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -58,6 +61,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: antimicrobial resistance mechanisms in Gram-negative bacteria.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -90,6 +96,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: microbiome–immunotherapy interactions in oncology patients.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -122,6 +131,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: translational virology and antiviral drug development.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -154,6 +166,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: environmental microbiology and microbial ecology of urban waterways.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -186,6 +201,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: CRISPR-based diagnostics for rapid infectious disease detection.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -228,6 +246,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: bacterial biofilm formation and antibiotic tolerance.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -260,6 +281,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: viral immunology and vaccine development.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -292,6 +316,9 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
         Research focus: fungal pathogenesis and innate immune evasion.
       </p>
       <div class="member-links">
+        <a href="#" class="member-link member-link-email" title="Email" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
         <a href="#" class="member-link member-link-orcid" title="ORCID" aria-label="ORCID">
           <span class="orcid-icon-text">iD</span>
         </a>
@@ -318,5 +345,5 @@ Meet the scientists and trainees who make the ASM-TMC Chapter possible. Our comm
 
 ::: {.callout-tip}
 ## Join the ASM-TMC Chapter
-Interested in becoming a member? Membership is open to anyone in the microbiological sciences. Reach out via the [About page](../about.qmd) or email us at [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com).
+Interested in becoming a member? Membership is open to anyone in the microbiological sciences. Reach out via the [About page](../about/index.qmd) or email us at [asm.tmc.chapter@gmail.com](mailto:asm.tmc.chapter@gmail.com).
 :::
