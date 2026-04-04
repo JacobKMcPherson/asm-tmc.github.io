@@ -89,17 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const p       = ev.extendedProps;
     const date    = new Date(ev.start + 'T00:00:00');
     const dateStr = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-    const icsBtn  = ev.icsFile
-      ? '<a href="' + escapeHtml(ev.icsFile) + '" download class="btn btn-sm btn-outline-primary ics-btn mt-2">'
-        + '<i class="bi bi-calendar-plus"></i> Add to Calendar (.ics)</a>'
+    const linkHtml = ev.url
+      ? '🔗 <strong>Link:</strong> <a href="' + escapeHtml(ev.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(ev.url) + '</a><br>'
       : '';
     html += '<div class="callout callout-style-default callout-note" style="margin-bottom:1rem;">'
           + '<div class="callout-header"><strong>' + escapeHtml(ev.title) + '</strong></div>'
           + '<div class="callout-body">'
           + '<p>🗓 <strong>Date:</strong> ' + dateStr + '<br>'
           + '📍 <strong>Location:</strong> ' + escapeHtml(p.location || 'TBD') + '<br>'
-          + '📝 <strong>Description:</strong> ' + escapeHtml(p.description || '') + '</p>'
-          + icsBtn
+          + linkHtml + '</p>'
           + '</div></div>';
   });
   container.innerHTML = html;
