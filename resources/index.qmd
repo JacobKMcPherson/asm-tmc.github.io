@@ -38,11 +38,6 @@ allResources = [
   { name: "ASM Career Center", category: "Career", audience: "All", description: "Job board and career resources for microbiologists.", url: "https://careers.asm.org/" },
   { name: "myIDP (Individual Development Plan)", category: "Career", audience: "Students", description: "Science careers IDP tool to help graduate students and postdocs plan their careers.", url: "https://myidp.sciencecareers.org/" },
   { name: "AAAS Science Careers", category: "Career", audience: "All", description: "Career resources and job listings for scientists from Science/AAAS.", url: "https://www.sciencecareers.org/" },
-  // Podcasts
-  { name: "The Lancet Infectious Diseases", category: "Podcast", audience: "All", description: "Podcast from The Lancet Infectious Diseases journal covering infectious disease research and policy.", url: "https://open.spotify.com/show/78uAfdHWOza6UD54zLkK5X?si=ee40ecf3265e4b2b" },
-  { name: "The Lancet Microbe", category: "Podcast", audience: "All", description: "Podcast from The Lancet Microbe journal exploring cutting-edge microbiology and infectious disease science.", url: "https://open.spotify.com/show/7ziyiBB9HIUZMZWjXjBGH3?si=55f87410d3ba468b" },
-  { name: "ESCMID CMI Comms", category: "Podcast", audience: "All", description: "Podcast from the European Society of Clinical Microbiology and Infectious Diseases covering clinical microbiology communications.", url: "https://open.spotify.com/show/4GFyrCmRyrkByGhz0Y2bEp?si=cf1576872f034f9c" },
-  { name: "Microbiology Society", category: "Podcast", audience: "All", description: "Podcast from the Microbiology Society featuring interviews and discussions on microbiology research.", url: "https://open.spotify.com/show/4kbFszOnT2OLWT3mfKovS1?si=db647487482d4829" },
   // TMC / Local
   { name: "Texas Medical Center", category: "Local", audience: "All", description: "Official TMC website with information on institutions, events, and innovation.", url: "https://www.tmc.edu/" },
   { name: "BCM Graduate School", category: "Local", audience: "Students", description: "Baylor College of Medicine graduate programs in biomedical sciences.", url: "https://www.bcm.edu/education/graduate-school-of-biomedical-sciences" },
@@ -59,10 +54,10 @@ viewof searchQuery = Inputs.text({
 })
 
 viewof categoryFilter = Inputs.checkbox(
-  ["Journal", "Funding", "Database", "Career", "Local", "Podcast"],
+  ["Journal", "Funding", "Database", "Career", "Local"],
   {
     label: "Category",
-    value: ["Journal", "Funding", "Database", "Career", "Local", "Podcast"]
+    value: ["Journal", "Funding", "Database", "Career", "Local"]
   }
 )
 

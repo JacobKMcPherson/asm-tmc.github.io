@@ -156,6 +156,38 @@ MicrobeTV's weekly podcast summarizing the latest research in infectious disease
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
+::: {.podcast-card}
+### The Lancet Infectious Diseases
+
+Podcast from *The Lancet Infectious Diseases* journal covering infectious disease research and policy:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/78uAfdHWOza6UD54zLkK5X?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.podcast-card}
+### The Lancet Microbe
+
+Podcast from *The Lancet Microbe* journal exploring cutting-edge microbiology and infectious disease science:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/7ziyiBB9HIUZMZWjXjBGH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.podcast-card}
+### ESCMID CMI Comms
+
+Podcast from the European Society of Clinical Microbiology and Infectious Diseases covering clinical microbiology communications:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4GFyrCmRyrkByGhz0Y2bEp?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.podcast-card}
+### Microbiology Society
+
+Podcast from the Microbiology Society featuring interviews and discussions on microbiology research:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4kbFszOnT2OLWT3mfKovS1?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
 :::
 
 ---
