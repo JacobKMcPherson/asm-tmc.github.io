@@ -9,6 +9,9 @@ toc: false
 <!-- FullCalendar CDN -->
 <link  href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<style>
+  .fc-event { cursor: pointer !important; }
+</style>
 
 <div class="events-layout">
   <div class="events-calendar-column">
@@ -17,7 +20,8 @@ toc: false
       <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
       <span class="fc-legend-dot" style="background:#e8740c;"></span> Networking &nbsp;
       <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop &nbsp;
-      <span class="fc-legend-dot" style="background:#7c3aed;"></span> Conference
+      <span class="fc-legend-dot" style="background:#7c3aed;"></span> Conference &nbsp;
+      <span class="fc-legend-dot" style="background:#c084fc;"></span> Abstract Deadline
     </div>
     <div id="event-calendar"></div>
   </div>
@@ -49,14 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
       height: 'auto',
       events: ASM_EVENTS,
       eventClick: (info) => {
-        const p   = info.event.extendedProps;
-        const msg = info.event.title
-                + (p.location    ? '\n📍 ' + p.location    : '')
-                + (p.description ? '\n📝 ' + p.description : '');
-        alert(msg);
+        const url = info.event.url;
+        if (url) {
+          info.jsEvent.preventDefault();
+          window.open(url, '_blank', 'noopener,noreferrer');
+        } else {
+          const p   = info.event.extendedProps;
+          const msg = info.event.title
+                  + (p.location    ? '\n📍 ' + p.location    : '')
+                  + (p.description ? '\n📝 ' + p.description : '');
+          alert(msg);
+        }
       },
       eventMouseEnter: (info) => {
         info.el.title = info.event.extendedProps.description || '';
+        info.el.style.cursor = 'pointer';
       }
     });
     calendar.render();
