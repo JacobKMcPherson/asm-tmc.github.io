@@ -16,7 +16,8 @@ toc: false
       <span class="fc-legend-dot" style="background:#003087;"></span> Symposium &nbsp;
       <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
       <span class="fc-legend-dot" style="background:#e8740c;"></span> Networking &nbsp;
-      <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop
+      <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop &nbsp;
+      <span class="fc-legend-dot" style="background:#7c3aed;"></span> Conference
     </div>
     <div id="event-calendar"></div>
   </div>

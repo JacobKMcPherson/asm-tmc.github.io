@@ -167,6 +167,7 @@
 .resource-badge-database  { background: #fef9c3; color: #854d0e; }
 .resource-badge-career    { background: #fce7f3; color: #9d174d; }
 .resource-badge-local     { background: #ede9fe; color: #5b21b6; }
+.resource-badge-podcast   { background: #ffedd5; color: #9a3412; }
 .resource-badge-audience  { background: var(--asm-orange-light); color: var(--asm-orange); }
 
 /* ── Responsive images ───────────────────────────────────────────────────── */
