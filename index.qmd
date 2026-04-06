@@ -158,15 +158,11 @@ Stay current with the latest in microbiology and infectious disease through thes
 ::: {.podcast-card}
 ### Editors in Conversation — ASM Podcast
 
-Listen to the latest episodes of ASM's *Editors in Conversation*, where journal editors discuss cutting-edge microbiology research:
-
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.podcast-card}
 ### SIDP Breakpoints
-
-The official podcast of the Society of Infectious Diseases Pharmacists (SIDP), covering antimicrobial stewardship and infectious diseases pharmacy:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1D79kHPArirj7kVhQUBBCE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
@@ -174,15 +170,11 @@ The official podcast of the Society of Infectious Diseases Pharmacists (SIDP), c
 ::: {.podcast-card}
 ### IDSA Let's Talk ID
 
-The Infectious Diseases Society of America's podcast featuring expert discussions on infectious disease topics:
-
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6nMGZTc5BYJ1Yj5bYnxvNU?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.podcast-card}
 ### MicrobeTV Puscast
-
-MicrobeTV's weekly podcast summarizing the latest research in infectious disease:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
@@ -190,15 +182,11 @@ MicrobeTV's weekly podcast summarizing the latest research in infectious disease
 ::: {.podcast-card}
 ### The Lancet Infectious Diseases
 
-Podcast from *The Lancet Infectious Diseases* journal covering infectious disease research and policy:
-
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/78uAfdHWOza6UD54zLkK5X?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.podcast-card}
 ### The Lancet Microbe
-
-Podcast from *The Lancet Microbe* journal exploring cutting-edge microbiology and infectious disease science:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/7ziyiBB9HIUZMZWjXjBGH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
@@ -206,15 +194,11 @@ Podcast from *The Lancet Microbe* journal exploring cutting-edge microbiology an
 ::: {.podcast-card}
 ### ESCMID CMI Comms
 
-Podcast from the European Society of Clinical Microbiology and Infectious Diseases covering clinical microbiology communications:
-
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4GFyrCmRyrkByGhz0Y2bEp?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.podcast-card}
 ### Microbiology Society
-
-Podcast from the Microbiology Society featuring interviews and discussions on microbiology research:
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4kbFszOnT2OLWT3mfKovS1?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
@@ -272,23 +256,15 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
   <div class="social-feed-card">
     <div class="social-feed-header">
       <i class="bi bi-twitter-x"></i>
-      <span>@asm_tmc on X</span>
+      <span>Twitter/X</span>
     </div>
     <div class="social-follow-wrapper">
-      <p class="social-feed-desc">
-        Follow us on X (formerly Twitter) for real-time updates, event announcements, and microbiology news from the Texas Medical Center community.
-      </p>
       <a href="https://x.com/asm_tmc"
          target="_blank"
          rel="noopener noreferrer"
          class="btn btn-dark">
         <i class="bi bi-twitter-x me-2"></i>Follow @asm_tmc
       </a>
-      <hr class="social-divider">
-      <p class="social-feed-note">
-        <i class="bi bi-bell me-1"></i>
-        Turn on notifications so you never miss an event announcement or research spotlight.
-      </p>
     </div>
   </div>
 
@@ -296,23 +272,15 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
   <div class="social-feed-card">
     <div class="social-feed-header">
       <i class="bi bi-instagram"></i>
-      <span>@asm_tmc on Instagram</span>
+      <span>Instagram</span>
     </div>
     <div class="social-follow-wrapper">
-      <p class="social-feed-desc">
-        Follow us on Instagram for behind-the-scenes photos, event highlights, and microbiology content from the Texas Medical Center community.
-      </p>
       <a href="https://instagram.com/asm_tmc"
          target="_blank"
          rel="noopener noreferrer"
          class="btn btn-instagram">
         <i class="bi bi-instagram me-2"></i>Follow @asm_tmc
       </a>
-      <hr class="social-divider">
-      <p class="social-feed-note">
-        <i class="bi bi-bell me-1"></i>
-        Turn on post notifications so you never miss an event announcement or research spotlight.
-      </p>
     </div>
   </div>
 
@@ -320,23 +288,15 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
   <div class="social-feed-card">
     <div class="social-feed-header">
       <i class="bi bi-facebook"></i>
-      <span>ASM-TMC on Facebook</span>
+      <span>Facebook</span>
     </div>
     <div class="social-follow-wrapper">
-      <p class="social-feed-desc">
-        Like our Facebook page to stay informed about chapter events, announcements, and news from the broader ASM community.
-      </p>
       <a href="https://www.facebook.com/asm.tmc.chapter"
          target="_blank"
          rel="noopener noreferrer"
          class="btn btn-facebook">
         <i class="bi bi-facebook me-2"></i>Like our Page
       </a>
-      <hr class="social-divider">
-      <p class="social-feed-note">
-        <i class="bi bi-bell me-1"></i>
-        Turn on notifications so you never miss an event announcement.
-      </p>
     </div>
   </div>
 
@@ -344,23 +304,15 @@ Follow us to stay up to date with ASM-TMC news, events, and announcements.
   <div class="social-feed-card">
     <div class="social-feed-header">
       <i class="bi bi-linkedin"></i>
-      <span>ASM-TMC on LinkedIn</span>
+      <span>LinkedIn</span>
     </div>
     <div class="social-follow-wrapper">
-      <p class="social-feed-desc">
-        Follow our LinkedIn page for professional updates, career opportunities, and networking with microbiologists across the Texas Medical Center.
-      </p>
       <a href="https://www.linkedin.com/company/asm-tmc"
          target="_blank"
          rel="noopener noreferrer"
          class="btn btn-linkedin">
         <i class="bi bi-linkedin me-2"></i>Follow on LinkedIn
       </a>
-      <hr class="social-divider">
-      <p class="social-feed-note">
-        <i class="bi bi-briefcase me-1"></i>
-        Connect with fellow microbiologists and discover new career opportunities.
-      </p>
     </div>
   </div>
 </div>
