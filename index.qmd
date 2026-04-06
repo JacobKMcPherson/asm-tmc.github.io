@@ -59,7 +59,7 @@ Stay tuned for our next seminar, networking mixer, and annual symposium. Visit t
 
 <div class="home-events-stack">
   <div id="homepage-next-event"></div>
-  <div class="home-calendar-card" id="homepage-calendar">
+  <div class="home-calendar-card">
     <div class="fc-legend mb-2">
       <span class="fc-legend-dot" style="background:#003087;"></span> Symposium &nbsp;
       <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     calendar.render();
   } else {
-    calendarElement.innerHTML = '<p class="text-muted">Unable to load the embedded calendar. Visit the <a href="events/index.html">Events page</a> for the full calendar.</p>';
+    calendarElement.innerHTML = '<p class="text-muted">Unable to load the embedded calendar. Visit the <a href="events/">Events page</a> for the full calendar.</p>';
   }
 
   if (!upcoming.length) {
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   nextContainer.innerHTML =
     '<div class="home-next-event">'
-    + '<h3><a href="#homepage-calendar">🚩 📅 Next Event</a></h3>'
+    + '<h3><a href="#homepage-event-calendar">🚩 📅 Next Event</a></h3>'
     + '<p><strong>' + escapeHtml(nextEvent.title) + '</strong>'
     + (nextProps.description ? ' — <em>' + escapeHtml(nextProps.description) + '</em>' : '')
     + '<br>🗓 <strong>Date:</strong> ' + formatDate(nextEvent.start)
