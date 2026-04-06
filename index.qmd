@@ -57,7 +57,7 @@ Stay tuned for our next seminar, networking mixer, and annual symposium. Visit t
 ```{=html}
 <script src="events/fullcalendar/index.global.min.js"></script>
 
-<div class="home-events-stack">
+<div class="home-events-grid">
   <div id="homepage-next-event"></div>
   <div class="home-calendar-card">
     <div class="fc-legend mb-2">
