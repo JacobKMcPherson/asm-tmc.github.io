@@ -52,20 +52,32 @@ Providing professional-development resources—grant writing, science communicat
 
 ## Upcoming Events
 
-Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar.
+Stay tuned for our next seminar, networking mixer, and annual symposium. Visit the [Events page](events/index.qmd) for the full calendar and event details.
 
 ```{=html}
-<div class="home-events-grid">
+<script src="events/fullcalendar/index.global.min.js"></script>
+
+<div class="home-events-stack">
   <div id="homepage-next-event"></div>
-  <div id="homepage-upcoming-events-list"></div>
+  <div class="home-calendar-card">
+    <div class="fc-legend mb-2">
+      <span class="fc-legend-dot" style="background:#003087;"></span> Symposium &nbsp;
+      <span class="fc-legend-dot" style="background:#0054a6;"></span> Seminar &nbsp;
+      <span class="fc-legend-dot" style="background:#e8740c;"></span> Networking &nbsp;
+      <span class="fc-legend-dot" style="background:#2e7d32;"></span> Workshop &nbsp;
+      <span class="fc-legend-dot" style="background:#7c3aed;"></span> Conference &nbsp;
+      <span class="fc-legend-dot" style="background:#c084fc;"></span> Abstract Deadline
+    </div>
+    <div id="homepage-event-calendar"></div>
+  </div>
 </div>
 <script src="events/asm-events.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const events = Array.isArray(window.ASM_EVENTS) ? window.ASM_EVENTS : [];
   const nextContainer = document.getElementById('homepage-next-event');
-  const listContainer = document.getElementById('homepage-upcoming-events-list');
-  if (!nextContainer || !listContainer) return;
+  const calendarElement = document.getElementById('homepage-event-calendar');
+  if (!nextContainer || !calendarElement) return;
 
   const escapeHtml = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -82,9 +94,41 @@ document.addEventListener('DOMContentLoaded', () => {
     .filter((event) => event.isUpcoming)
     .sort((a, b) => new Date(a.start) - new Date(b.start));
 
+  if (window.FullCalendar && calendarElement) {
+    const calendar = new FullCalendar.Calendar(calendarElement, {
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,listYear'
+      },
+      height: 'auto',
+      events,
+      eventClick: (info) => {
+        const url = info.event.url;
+        if (url) {
+          info.jsEvent.preventDefault();
+          window.open(url, '_blank', 'noopener,noreferrer');
+        } else {
+          const props = info.event.extendedProps;
+          const message = info.event.title
+            + (props.location ? '\n📍 ' + props.location : '')
+            + (props.description ? '\n📝 ' + props.description : '');
+          alert(message);
+        }
+      },
+      eventMouseEnter: (info) => {
+        info.el.title = info.event.extendedProps.description || '';
+        info.el.style.cursor = 'pointer';
+      }
+    });
+    calendar.render();
+  } else {
+    calendarElement.innerHTML = '<p class="text-muted">Unable to load the embedded calendar. Visit the <a href="events/">Events page</a> for the full calendar.</p>';
+  }
+
   if (!upcoming.length) {
     nextContainer.innerHTML = '<p class="text-muted">No upcoming events scheduled at this time. Check back soon!</p>';
-    listContainer.innerHTML = '';
     return;
   }
 
@@ -93,25 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   nextContainer.innerHTML =
     '<div class="home-next-event">'
-    + '<h3><a href="events/index.html#calendar">🚩 📅 Next Event</a></h3>'
+    + '<h3><a href="#homepage-event-calendar">🚩 📅 Next Event</a></h3>'
     + '<p><strong>' + escapeHtml(nextEvent.title) + '</strong>'
     + (nextProps.description ? ' — <em>' + escapeHtml(nextProps.description) + '</em>' : '')
     + '<br>🗓 <strong>Date:</strong> ' + formatDate(nextEvent.start)
     + '<br>📍 <strong>Location:</strong> ' + escapeHtml(nextProps.location || 'TBD')
     + '</p></div>';
-
-  let listHtml = '<ul class="home-upcoming-events">';
-  upcoming.forEach((event) => {
-    const props = event.extendedProps || {};
-    listHtml += '<li>'
-      + '<a href="events/index.html#calendar"><strong>' + escapeHtml(event.title) + '</strong></a>'
-      + ' — ' + formatDate(event.start)
-      + (props.location ? ' · ' + escapeHtml(props.location) : '')
-      + '</li>';
-  });
-  listHtml += '</ul>';
-
-  listContainer.innerHTML = listHtml;
 });
 </script>
 ```
