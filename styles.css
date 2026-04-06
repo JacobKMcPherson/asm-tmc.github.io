@@ -310,6 +310,12 @@ pre { border-radius: 6px; }
   margin: 1.5rem 0;
 }
 
+@media (max-width: 1399.98px) {
+  .podcast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 991.98px) {
   .hero-banner {
     width: 100%;
