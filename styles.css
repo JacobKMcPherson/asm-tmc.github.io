@@ -225,7 +225,6 @@ pre { border-radius: 6px; }
 
 .home-upcoming-events {
   padding-left: 1.25rem;
-  margin-top: 0.6rem;
 }
 
 .home-upcoming-events li + li {
@@ -259,23 +258,6 @@ pre { border-radius: 6px; }
 
 .podcast-card h3 {
   margin-top: 0;
-}
-
-.sidebar-podcast-section h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: var(--asm-blue);
-}
-
-.sidebar-podcast-card {
-  margin-bottom: 1.25rem;
-}
-
-.sidebar-podcast-card p {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--bs-body-color);
 }
 
 .events-layout {
@@ -629,10 +611,10 @@ pre { border-radius: 6px; }
     margin-right: calc(50% - 50vw) !important;
     grid-template-columns:
       [screen-start] 10vw
-      [screen-start-inset page-start page-start-inset] 5vw
-      [body-start-outset body-start body-content-start] 55vw
-      [body-content-end] 5vw
-      [body-end body-end-outset] 25vw
+      [screen-start-inset page-start page-start-inset] 10vw
+      [body-start-outset body-start body-content-start] 60vw
+      [body-content-end] 10vw
+      [body-end body-end-outset] 10vw
       [page-end-inset page-end screen-end-inset screen-end] !important;
   }
 
