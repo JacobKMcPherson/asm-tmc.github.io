@@ -183,12 +183,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextProps = nextEvent.extendedProps || {};
 
   const afterFirst = upcoming.slice(1, 4);
+  const safeHref = (url) => {
+    try {
+      const parsed = new URL(url);
+      return (parsed.protocol === 'https:' || parsed.protocol === 'http:') ? escapeHtml(url) : null;
+    } catch (_) { return null; }
+  };
   const next3Html = afterFirst.length > 0
     ? '<ul class="home-upcoming-events">'
       + afterFirst.map((e) => {
           const t = escapeHtml(e.title);
-          return e.url
-            ? '<li><a href="' + escapeHtml(e.url) + '" target="_blank" rel="noopener noreferrer">' + t + '</a></li>'
+          const href = e.url ? safeHref(e.url) : null;
+          return href
+            ? '<li><a href="' + href + '" target="_blank" rel="noopener noreferrer">' + t + '</a></li>'
             : '<li>' + t + '</li>';
         }).join('')
       + '</ul>'
