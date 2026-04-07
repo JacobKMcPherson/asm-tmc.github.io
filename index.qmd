@@ -23,42 +23,42 @@ toc: false
 
 ::: {.sidebar-podcast-card}
 <p>Editors in Conversation — ASM</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="Editors in Conversation — ASM Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>SIDP Breakpoints</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1D79kHPArirj7kVhQUBBCE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="SIDP Breakpoints Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/1D79kHPArirj7kVhQUBBCE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>IDSA Let's Talk ID</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6nMGZTc5BYJ1Yj5bYnxvNU?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="IDSA Let's Talk ID Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/6nMGZTc5BYJ1Yj5bYnxvNU?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>MicrobeTV Puscast</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="MicrobeTV Puscast" style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>The Lancet Infectious Diseases</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/78uAfdHWOza6UD54zLkK5X?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="The Lancet Infectious Diseases Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/78uAfdHWOza6UD54zLkK5X?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>The Lancet Microbe</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/7ziyiBB9HIUZMZWjXjBGH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="The Lancet Microbe Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/7ziyiBB9HIUZMZWjXjBGH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>ESCMID CMI Comms</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4GFyrCmRyrkByGhz0Y2bEp?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="ESCMID CMI Comms Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/4GFyrCmRyrkByGhz0Y2bEp?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 ::: {.sidebar-podcast-card}
 <p>Microbiology Society</p>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4kbFszOnT2OLWT3mfKovS1?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe title="Microbiology Society Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/4kbFszOnT2OLWT3mfKovS1?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 :::
 
 :::
