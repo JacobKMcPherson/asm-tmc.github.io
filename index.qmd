@@ -17,6 +17,53 @@ toc: false
 
 ---
 
+::: {.column-margin}
+::: {.sidebar-podcast-section}
+#### 🎙 Podcasts
+
+::: {.sidebar-podcast-card}
+<p>Editors in Conversation — ASM</p>
+<iframe title="Editors in Conversation — ASM Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>SIDP Breakpoints</p>
+<iframe title="SIDP Breakpoints Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/1D79kHPArirj7kVhQUBBCE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>IDSA Let's Talk ID</p>
+<iframe title="IDSA Let's Talk ID Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/6nMGZTc5BYJ1Yj5bYnxvNU?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>MicrobeTV Puscast</p>
+<iframe title="MicrobeTV Puscast" style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>The Lancet Infectious Diseases</p>
+<iframe title="The Lancet Infectious Diseases Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/78uAfdHWOza6UD54zLkK5X?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>The Lancet Microbe</p>
+<iframe title="The Lancet Microbe Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/7ziyiBB9HIUZMZWjXjBGH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>ESCMID CMI Comms</p>
+<iframe title="ESCMID CMI Comms Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/4GFyrCmRyrkByGhz0Y2bEp?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+::: {.sidebar-podcast-card}
+<p>Microbiology Society</p>
+<iframe title="Microbiology Society Podcast" style="border-radius:12px" src="https://open.spotify.com/embed/show/4kbFszOnT2OLWT3mfKovS1?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+:::
+
+:::
+:::
+
 ## Our Mission
 
 The **American Society of Microbiology – Texas Medical Center (ASM-TMC) Chapter** brings together students, postdoctoral researchers, faculty, and industry professionals working in the microbiological sciences across the greater Houston / TMC area.
@@ -135,6 +182,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextEvent = upcoming[0];
   const nextProps = nextEvent.extendedProps || {};
 
+  const afterFirst = upcoming.slice(1, 4);
+  const safeHref = (url) => {
+    try {
+      const parsed = new URL(url);
+      return (parsed.protocol === 'https:' || parsed.protocol === 'http:') ? escapeHtml(url) : null;
+    } catch (_) { return null; }
+  };
+  const next3Html = afterFirst.length > 0
+    ? '<ul class="home-upcoming-events">'
+      + afterFirst.map((e) => {
+          const t = escapeHtml(e.title);
+          const href = e.url ? safeHref(e.url) : null;
+          return href
+            ? '<li><a href="' + href + '" target="_blank" rel="noopener noreferrer">' + t + '</a></li>'
+            : '<li>' + t + '</li>';
+        }).join('')
+      + '</ul>'
+    : '';
+
   nextContainer.innerHTML =
     '<div class="home-next-event">'
     + '<h3><a href="#homepage-event-calendar">🚩 📅 Next Event</a></h3>'
@@ -142,68 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
     + (nextProps.description ? ' — <em>' + escapeHtml(nextProps.description) + '</em>' : '')
     + '<br>🗓 <strong>Date:</strong> ' + formatDate(nextEvent.start)
     + '<br>📍 <strong>Location:</strong> ' + escapeHtml(nextProps.location || 'TBD')
-    + '</p></div>';
+    + '</p></div>'
+    + next3Html;
 });
 </script>
 ```
-
----
-
-## Podcasts
-
-Stay current with the latest in microbiology and infectious disease through these podcasts:
-
-::: {.podcast-grid}
-
-::: {.podcast-card}
-### Editors in Conversation — ASM Podcast
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4OuP4z0aWTTTbqnVCVSDGl?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### SIDP Breakpoints
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1D79kHPArirj7kVhQUBBCE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### IDSA Let's Talk ID
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6nMGZTc5BYJ1Yj5bYnxvNU?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### MicrobeTV Puscast
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/66C9Cul1toQ643HVjFMUH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### The Lancet Infectious Diseases
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/78uAfdHWOza6UD54zLkK5X?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### The Lancet Microbe
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/7ziyiBB9HIUZMZWjXjBGH3?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### ESCMID CMI Comms
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4GFyrCmRyrkByGhz0Y2bEp?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-::: {.podcast-card}
-### Microbiology Society
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4kbFszOnT2OLWT3mfKovS1?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-:::
-
-:::
 
 ---
 
